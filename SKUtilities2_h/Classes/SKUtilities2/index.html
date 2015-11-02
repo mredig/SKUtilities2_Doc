@@ -1,0 +1,650 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>SKUtilities2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+<style><!--
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:link {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:active {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:visited:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }
+#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<style id="disable_before_iOS_5"><!--
+#tocMenu {
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+}
+#bodyContents {
+		width: auto;
+		left: 235px;
+		right: 0;
+		padding-left: 15px;
+		position: fixed;
+		height: 100%;
+		overflow-y: scroll;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))) {
+        if (navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)) {
+                /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+                var del_style_elt = document.getElementById("disable_before_iOS_5");
+                if (del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+// --></script><script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script><style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+<!-- headerDoc=cl; uid=//apple_ref/occ/cl/SKUtilities2;  name=SKUtilities2-->
+<a name="//apple_ref/occ/cl/SKUtilities2"></a><table id="hd_outermost_table" height="100%" width="100%"><tr>
+<td valign="top" id="tocMenu" src="toc.html"></td>
+<td id="bodyContents" valign="top">
+<a name="top"></a>
+<h1><a name="SKUtilities2">SKUtilities2</a></h1>
+<div class="spec_sheet_info_box"><table cellspacing="0" class="specbox">
+<tr>
+<td scope="row"><b>Superclass:</b></td>
+<td><div style="margin-bottom:1px"><div class="content_text">
+<!-- a logicalPath="//apple_ref/occ/cl/NSObject" machineGenerated="true" -->NSObject<!-- /a -->
+</div></div></td>
+</tr>
+<tr>
+<td scope="row"><b>Declared In:</b></td>
+<td><div style="margin-bottom:1px"><div class="content_text"><a logicalpath="//apple_ref/doc/header/SKUtilities2.h" target="_top" machinegenerated="true" href="../../index.html#//apple_ref/doc/header/SKUtilities2.h">SKUtilities2</a></div></div></td>
+</tr>
+</table></div>
+<h2>Introduction</h2>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/cl/SKUtilities2;name=start --><p>This is a singleton class that carries a lot of information allowing for access anywhere within your app. It'll track the current time, intervals between frames, handle logging, store objects, and manage navigation and other built in utilties with this library.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/cl/SKUtilities2;name=end --><!-- end discussion -->
+</p>
+<hr class="afterClassOrHeaderInfo">
+<br><a name="HeaderDoc_methods"></a>
+<h2 class="h2tight">Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/SKUtilities2/gestureTapDown" target="_top">-gestureTapDown</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/SKUtilities2/gestureTapUp" target="_top">-gestureTapUp</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/SKUtilities2/handleSubNodeMovement:withCurrentSelection:inSet:inScene:" target="_top">-handleSubNodeMovement:withCurrentSelection:inSet:inScene:</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/SKUtilities2/setNavFocus:" target="_top">-setNavFocus:</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/SKUtilities2/sharedUtilities" target="_top">+sharedUtilities</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:" target="_top">-updateCurrentTime:</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/SKUtilities2/gestureTapDown;   name=SKUtilities2::gestureTapDown --><a name="//apple_ref/occ/instm/SKUtilities2/gestureTapDown"></a>
+<h3><a name="gestureTapDown">gestureTapDown</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instm/SKUtilities2/gestureTapDown;name=start -->-(<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/gestureTapDown //apple_ref/occ/data/SKUtilities2/gestureTapDown //apple_ref/occ/data/gestureTapDown //apple_ref/occ/clconst/SKUtilities2/gestureTapDown " machineGenerated="true" --><span class="var">gestureTapDown</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instm/SKUtilities2/gestureTapDown;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instm/SKUtilities2/gestureTapDown;name=start --><p>Used internally to communicate logic for button presses.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instm/SKUtilities2/gestureTapDown;name=end --><!-- end discussion -->
+</p>
+<p><b>Platforms:</b></p>
+<div class="list_indent"><dl>
+<dt><p>tvOS</p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/SKUtilities2/gestureTapUp;   name=SKUtilities2::gestureTapUp --><a name="//apple_ref/occ/instm/SKUtilities2/gestureTapUp"></a>
+<h3><a name="gestureTapUp">gestureTapUp</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instm/SKUtilities2/gestureTapUp;name=start -->-(<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/gestureTapUp //apple_ref/occ/data/SKUtilities2/gestureTapUp //apple_ref/occ/data/gestureTapUp //apple_ref/occ/clconst/SKUtilities2/gestureTapUp " machineGenerated="true" --><span class="var">gestureTapUp</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instm/SKUtilities2/gestureTapUp;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instm/SKUtilities2/gestureTapUp;name=start --><p>Used internally to communicate logic for button presses.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instm/SKUtilities2/gestureTapUp;name=end --><!-- end discussion -->
+</p>
+<p><b>Platforms:</b></p>
+<div class="list_indent"><dl>
+<dt><p>tvOS</p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/SKUtilities2/handleSubNodeMovement:withCurrentSelection:inSet:inScene:;   name=SKUtilities2::handleSubNodeMovement:withCurrentSelection:inSet:inScene: --><a name="//apple_ref/occ/instm/SKUtilities2/handleSubNodeMovement:withCurrentSelection:inSet:inScene:"></a>
+<h3><a name="handleSubNodeMovement:withCurrentSelection:inSet:inScene:">handleSubNodeMovement:withCurrentSelection:inSet:inScene:</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instm/SKUtilities2/handleSubNodeMovement:withCurrentSelection:inSet:inScene:;name=start -->-(<!-- a logicalPath="//apple_ref/occ/cl/SKNode //apple_ref/occ/tdef/SKNode //apple_ref/occ/tag/SKNode //apple_ref/occ/struct/SKNode //apple_ref/occ/intf/SKNode //apple_ref/doc/anysymbol/SKNode" machineGenerated="true" --><span class="type">SKNode</span><!-- /a --><span class="type">*</span>)<a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUtilities2/handleSubNodeMovement:withCurrentSelection:inSet:inScene:" logicalPath="//apple_ref/occ/instm/SKUtilities2/handleSubNodeMovement" target="_top"><span class="function">handleSubNodeMovement</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/CGPoint //apple_ref/occ/tdef/CGPoint //apple_ref/occ/tag/CGPoint //apple_ref/occ/struct/CGPoint //apple_ref/occ/intf/CGPoint //apple_ref/doc/anysymbol/CGPoint" machineGenerated="true" --><span class="type">CGPoint</span><!-- /a -->)<span class="param">location</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/SKUtilities2/withCurrentSelection //apple_ref/occ/clm/SKUtilities2/withCurrentSelection //apple_ref/occ/intfcm/SKUtilities2/withCurrentSelection //apple_ref/occ/intfm/SKUtilities2/withCurrentSelection //apple_ref/occ/func/withCurrentSelection //apple_ref/occ/ftmplt/SKUtilities2/withCurrentSelection //apple_ref/occ/defn/withCurrentSelection //apple_ref/occ/macro/withCurrentSelection //apple_ref/doc/anysymbol/withCurrentSelection" machineGenerated="true" --><span class="function">withCurrentSelection</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/SKNode //apple_ref/occ/tdef/SKNode //apple_ref/occ/tag/SKNode //apple_ref/occ/struct/SKNode //apple_ref/occ/intf/SKNode //apple_ref/doc/anysymbol/SKNode" machineGenerated="true" --><span class="type">SKNode</span><!-- /a --><span class="type">*</span>)<span class="param">currentSelectedNode</span> <!-- a logicalPath="//apple_ref/occ/instm/SKUtilities2/inSet //apple_ref/occ/clm/SKUtilities2/inSet //apple_ref/occ/intfcm/SKUtilities2/inSet //apple_ref/occ/intfm/SKUtilities2/inSet //apple_ref/occ/func/inSet //apple_ref/occ/ftmplt/SKUtilities2/inSet //apple_ref/occ/defn/inSet //apple_ref/occ/macro/inSet //apple_ref/doc/anysymbol/inSet" machineGenerated="true" --><span class="function">inSet</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSSet //apple_ref/occ/tdef/NSSet //apple_ref/occ/tag/NSSet //apple_ref/occ/struct/NSSet //apple_ref/occ/intf/NSSet //apple_ref/doc/anysymbol/NSSet" machineGenerated="true" --><span class="type">NSSet</span><!-- /a --><span class="type">*</span>)<span class="param">navNodeSet</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/SKUtilities2/inScene //apple_ref/occ/clm/SKUtilities2/inScene //apple_ref/occ/intfcm/SKUtilities2/inScene //apple_ref/occ/intfm/SKUtilities2/inScene //apple_ref/occ/func/inScene //apple_ref/occ/ftmplt/SKUtilities2/inScene //apple_ref/occ/defn/inScene //apple_ref/occ/macro/inScene //apple_ref/doc/anysymbol/inScene" machineGenerated="true" --><span class="function">inScene</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/SKScene //apple_ref/occ/tdef/SKScene //apple_ref/occ/tag/SKScene //apple_ref/occ/struct/SKScene //apple_ref/occ/intf/SKScene //apple_ref/doc/anysymbol/SKScene" machineGenerated="true" --><span class="type">SKScene</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/scene //apple_ref/occ/data/SKUtilities2/scene //apple_ref/occ/data/scene //apple_ref/occ/clconst/SKUtilities2/scene " machineGenerated="true" --><span class="var">scene</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instm/SKUtilities2/handleSubNodeMovement:withCurrentSelection:inSet:inScene:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instm/SKUtilities2/handleSubNodeMovement:withCurrentSelection:inSet:inScene:;name=start --><p>Used internally. Best not to touch.
+</p>
+<p>Gets called when movement exceeds the navThresholdDistance. Logic determines which primary direction the movement was in and decides what node is closest in that direction.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instm/SKUtilities2/handleSubNodeMovement:withCurrentSelection:inSet:inScene:;name=end --><!-- end discussion -->
+</p>
+<p><b>Platforms:</b></p>
+<div class="list_indent"><dl>
+<dt><p>tvOS</p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/SKUtilities2/setNavFocus:;   name=SKUtilities2::setNavFocus: --><a name="//apple_ref/occ/instm/SKUtilities2/setNavFocus:"></a>
+<h3><a name="setNavFocus:">setNavFocus:</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instm/SKUtilities2/setNavFocus:;name=start -->-(<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUtilities2/setNavFocus:" logicalPath="//apple_ref/occ/instm/SKUtilities2/setNavFocus" target="_top"><span class="function">setNavFocus</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/SKNode //apple_ref/occ/tdef/SKNode //apple_ref/occ/tag/SKNode //apple_ref/occ/struct/SKNode //apple_ref/occ/intf/SKNode //apple_ref/doc/anysymbol/SKNode" machineGenerated="true" --><span class="type">SKNode</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/navFocus //apple_ref/occ/data/SKUtilities2/navFocus //apple_ref/occ/data/navFocus //apple_ref/occ/clconst/SKUtilities2/navFocus " machineGenerated="true" --><span class="var">navFocus</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instm/SKUtilities2/setNavFocus:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/SKUtilities2/setNavFocus:/navFocus;   name=setNavFocus:::navFocus -->
+<a name="//apple_ref/doc/methodparam/SKUtilities2/setNavFocus:/navFocus"></a>
+<code>navFocus</code>
+</dt>
+<dd>
+<p>SKNode to set as the navFocus.
+ </p>
+<pre>
+ 
+ SKUPushButton* buttonExample; // assuming this is created properly
+ [self addNodeToNavNodesSKU:buttonExample];
+ 
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instm/SKUtilities2/setNavFocus:;name=start --><p>Call this method to update the current navFocus node. Typically used on scenes when initially presented.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instm/SKUtilities2/setNavFocus:;name=end --><!-- end discussion -->
+</p>
+<p><b>Platforms:</b></p>
+<div class="list_indent"><dl>
+<dt><p>tvOS</p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/SKUtilities2/sharedUtilities;   name=SKUtilities2::sharedUtilities --><a name="//apple_ref/occ/clm/SKUtilities2/sharedUtilities"></a>
+<h3><a name="sharedUtilities">sharedUtilities</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/SKUtilities2/sharedUtilities;name=start -->+(<a machinegenerated="true" href="index.html#//apple_ref/occ/cl/SKUtilities2" logicalPath="//apple_ref/occ/cl/SKUtilities2" target="_top"><span class="type">SKUtilities2</span></a><span class="type">*</span>) <!-- a logicalPath="//apple_ref/occ/econst/sharedUtilities //apple_ref/occ/data/SKUtilities2/sharedUtilities //apple_ref/occ/data/sharedUtilities //apple_ref/occ/clconst/SKUtilities2/sharedUtilities " machineGenerated="true" --><span class="var">sharedUtilities</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/SKUtilities2/sharedUtilities;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/clm/SKUtilities2/sharedUtilities;name=start --><p>Singleton object. Called via
+ </p>
+<pre>
+ 
+ SKUSharedUtilities
+ 
+ </pre>
+
+<p>Allows for storing objects in the userData NSMutableDictionary, carrying time information, managing tvOS navigation logic, and more.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/clm/SKUtilities2/sharedUtilities;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instm;  uid=//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:;   name=SKUtilities2::updateCurrentTime: --><a name="//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:"></a>
+<h3><a name="updateCurrentTime:">updateCurrentTime:</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:;name=start -->-(<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:" logicalPath="//apple_ref/occ/instm/SKUtilities2/updateCurrentTime" target="_top"><span class="function">updateCurrentTime</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/CFTimeInterval //apple_ref/occ/tdef/CFTimeInterval //apple_ref/occ/tag/CFTimeInterval //apple_ref/occ/struct/CFTimeInterval //apple_ref/occ/intf/CFTimeInterval //apple_ref/doc/anysymbol/CFTimeInterval" machineGenerated="true" --><span class="type">CFTimeInterval</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/timeUpdate //apple_ref/occ/data/SKUtilities2/timeUpdate //apple_ref/occ/data/timeUpdate //apple_ref/occ/clconst/SKUtilities2/timeUpdate " machineGenerated="true" --><span class="var">timeUpdate</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:;name=start --><p>Call this method in your scene's update method to share the time with other objects throughout the game.
+  </p>
+<pre>
+ 
+ -(void)update:(CFTimeInterval)currentTime {
+        [SKUSharedUtilities updateCurrentTIme:currentTime];
+}
+ 
+ </pre>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:;name=end --><!-- end discussion -->
+<hr class="betweenSections">
+<a name="HeaderDoc_props"></a>
+<h2 class="h2tight">Properties</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/currentTime" target="_top">currentTime</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/deltaFrameTime" target="_top">deltaFrameTime</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/deltaFrameTimeUncapped" target="_top">deltaFrameTimeUncapped</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/deltaMaxTime" target="_top">deltaMaxTime</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/macButtonFlags" target="_top">macButtonFlags</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/navFocus" target="_top">navFocus</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/navMode" target="_top">navMode</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/navThresholdDistance" target="_top">navThresholdDistance</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/touchTracker" target="_top">touchTracker</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/userData" target="_top">userData</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUtilities2/verbosityLevel" target="_top">verbosityLevel</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/currentTime;   name=SKUtilities2::currentTime --><a name="//apple_ref/occ/instp/SKUtilities2/currentTime"></a>
+<h3><a name="currentTime">currentTime</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/currentTime;name=start -->@property (<span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//apple_ref/occ/cl/CFTimeInterval //apple_ref/occ/tdef/CFTimeInterval //apple_ref/occ/tag/CFTimeInterval //apple_ref/occ/struct/CFTimeInterval //apple_ref/occ/intf/CFTimeInterval //apple_ref/doc/anysymbol/CFTimeInterval" machineGenerated="true" --><span class="type">CFTimeInterval</span><!-- /a --> <!-- a logicalPath="//apple_ref/occ/econst/currentTime //apple_ref/occ/data/SKUtilities2/currentTime //apple_ref/occ/data/currentTime //apple_ref/occ/clconst/SKUtilities2/currentTime " machineGenerated="true" --><span class="var">currentTime</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/currentTime;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/currentTime;name=start --><p>Current time passed in from scene update method, but must be set up properly. This allows you to get the currentTime into other objects or methods without directly calling them from the update method.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/currentTime;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/deltaFrameTime;   name=SKUtilities2::deltaFrameTime --><a name="//apple_ref/occ/instp/SKUtilities2/deltaFrameTime"></a>
+<h3><a name="deltaFrameTime">deltaFrameTime</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/deltaFrameTime;name=start -->@property (<span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//apple_ref/occ/cl/CFTimeInterval //apple_ref/occ/tdef/CFTimeInterval //apple_ref/occ/tag/CFTimeInterval //apple_ref/occ/struct/CFTimeInterval //apple_ref/occ/intf/CFTimeInterval //apple_ref/doc/anysymbol/CFTimeInterval" machineGenerated="true" --><span class="type">CFTimeInterval</span><!-- /a --> <!-- a logicalPath="//apple_ref/occ/econst/deltaFrameTime //apple_ref/occ/data/SKUtilities2/deltaFrameTime //apple_ref/occ/data/deltaFrameTime //apple_ref/occ/clconst/SKUtilities2/deltaFrameTime " machineGenerated="true" --><span class="var">deltaFrameTime</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/deltaFrameTime;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/deltaFrameTime;name=start --><p>Amount of time passed since last frame. This value is capped by deltaMaxTime.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/deltaFrameTime;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/deltaFrameTimeUncapped;   name=SKUtilities2::deltaFrameTimeUncapped --><a name="//apple_ref/occ/instp/SKUtilities2/deltaFrameTimeUncapped"></a>
+<h3><a name="deltaFrameTimeUncapped">deltaFrameTimeUncapped</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/deltaFrameTimeUncapped;name=start -->@property (<span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//apple_ref/occ/cl/CFTimeInterval //apple_ref/occ/tdef/CFTimeInterval //apple_ref/occ/tag/CFTimeInterval //apple_ref/occ/struct/CFTimeInterval //apple_ref/occ/intf/CFTimeInterval //apple_ref/doc/anysymbol/CFTimeInterval" machineGenerated="true" --><span class="type">CFTimeInterval</span><!-- /a --> <!-- a logicalPath="//apple_ref/occ/econst/deltaFrameTimeUncapped //apple_ref/occ/data/SKUtilities2/deltaFrameTimeUncapped //apple_ref/occ/data/deltaFrameTimeUncapped //apple_ref/occ/clconst/SKUtilities2/deltaFrameTimeUncapped " machineGenerated="true" --><span class="var">deltaFrameTimeUncapped</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/deltaFrameTimeUncapped;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/deltaFrameTimeUncapped;name=start --><p>Amount of time passed since last frame. This value is NOT capped by deltaMaxTime.
+Vulnerable to lag spikes if used.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/deltaFrameTimeUncapped;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/deltaMaxTime;   name=SKUtilities2::deltaMaxTime --><a name="//apple_ref/occ/instp/SKUtilities2/deltaMaxTime"></a>
+<h3><a name="deltaMaxTime">deltaMaxTime</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/deltaMaxTime;name=start -->@property (<span class="param">nonatomic</span>) <!-- a logicalPath="//apple_ref/occ/cl/CGFloat //apple_ref/occ/tdef/CGFloat //apple_ref/occ/tag/CGFloat //apple_ref/occ/struct/CGFloat //apple_ref/occ/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <!-- a logicalPath="//apple_ref/occ/econst/deltaMaxTime //apple_ref/occ/data/SKUtilities2/deltaMaxTime //apple_ref/occ/data/deltaMaxTime //apple_ref/occ/clconst/SKUtilities2/deltaMaxTime " machineGenerated="true" --><span class="var">deltaMaxTime</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/deltaMaxTime;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/deltaMaxTime;name=start --><p>Defaults to 1.0f.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/deltaMaxTime;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/macButtonFlags;   name=SKUtilities2::macButtonFlags --><a name="//apple_ref/occ/instp/SKUtilities2/macButtonFlags"></a>
+<h3><a name="macButtonFlags">macButtonFlags</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/macButtonFlags;name=start -->@property (<span class="param">nonatomic</span>) <a machinegenerated="true" href="../../index.html#//apple_ref/c/tdef/kSKUMouseButtonFlags" logicalPath="//apple_ref/occ/cl/kSKUMouseButtonFlags //apple_ref/occ/tdef/kSKUMouseButtonFlags" target="_top"><span class="type">kSKUMouseButtonFlags</span></a> <!-- a logicalPath="//apple_ref/occ/econst/macButtonFlags //apple_ref/occ/data/SKUtilities2/macButtonFlags //apple_ref/occ/data/macButtonFlags //apple_ref/occ/clconst/SKUtilities2/macButtonFlags " machineGenerated="true" --><span class="var">macButtonFlags</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/macButtonFlags;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/macButtonFlags;name=start --><p>Flags to determine what sort of mouse button is passed onto nodes. By default, it only passes left mouse button events, but adding other kSKUMouseButtonFlags flags allows to respond to other mouse buttons.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/macButtonFlags;name=end --><!-- end discussion -->
+</p>
+<p><b>Platforms:</b></p>
+<div class="list_indent"><dl>
+<dt><p>OSX</p></dt>
+<dd></dd>
+</dl></div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="../../index.html#//apple_ref/c/tdef/kSKUMouseButtonFlags" logicalPath="//apple_ref/c/tdef/kSKUMouseButtonFlags" target="_top">kSKUMouseButtonFlags</a></p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/navFocus;   name=SKUtilities2::navFocus --><a name="//apple_ref/occ/instp/SKUtilities2/navFocus"></a>
+<h3><a name="navFocus">navFocus</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/navFocus;name=start -->@property (<span class="param">nonatomic</span>,
+    <span class="param">readonly</span>) <!-- a logicalPath="//apple_ref/occ/cl/SKNode //apple_ref/occ/tdef/SKNode //apple_ref/occ/tag/SKNode //apple_ref/occ/struct/SKNode //apple_ref/occ/intf/SKNode //apple_ref/doc/anysymbol/SKNode" machineGenerated="true" --><span class="type">SKNode</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//apple_ref/occ/econst/navFocus //apple_ref/occ/data/SKUtilities2/navFocus //apple_ref/occ/data/navFocus //apple_ref/occ/clconst/SKUtilities2/navFocus " machineGenerated="true" --><span class="var">navFocus</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/navFocus;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/navFocus;name=start --><p>Allows for readonly access to the current navFocus node.
+</p>
+<p>Set via
+  </p>
+<pre>
+ 
+ [SKUSharedUtilities setNavFocus:self]; //called from a node
+ 
+ </pre>
+
+<p>When navMode is on, whatever node is set here is the node that dictates what nav nodes are used. Typically this will be set to the current scene that you will then call
+ </p>
+<pre>
+ 
+ SKUPushButton* buttonExample; // assuming this is created properly
+ [self addNodeToNavNodesSKU:buttonExample];
+ 
+ </pre>
+
+<p>Note that only SKUButton nodes (and subclasses) are set to automatically distinguish focus states when focused or removed from focus. For your own nodes, you can use whatever current navFocus is set when it calls
+  </p>
+<pre>
+ 
+ -(void)currentSelectedNodeUpdatedSKU:(SKNode *)node {
+        //do logic here to update visuals
+ }
+ 
+ </pre>
+
+
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/navFocus;name=end --><!-- end discussion -->
+<p><b>Platforms:</b></p>
+<div class="list_indent"><dl>
+<dt><p>tvOS</p></dt>
+<dd></dd>
+</dl></div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="../../Categories/SKNode_ConsolidatedInput_/index.html#//apple_ref/occ/cat/SKNode(ConsolidatedInput)" logicalPath="//apple_ref/occ/cat/SKNode(ConsolidatedInput)" target="_top">SKNode(ConsolidatedInput)</a></p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/navMode;   name=SKUtilities2::navMode --><a name="//apple_ref/occ/instp/SKUtilities2/navMode"></a>
+<h3><a name="navMode">navMode</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/navMode;name=start -->@property (<span class="param">nonatomic</span>) <a machinegenerated="true" href="../../index.html#//apple_ref/c/tdef/kSKUNavModes" logicalPath="//apple_ref/occ/cl/kSKUNavModes //apple_ref/occ/tdef/kSKUNavModes" target="_top"><span class="type">kSKUNavModes</span></a> <!-- a logicalPath="//apple_ref/occ/econst/navMode //apple_ref/occ/data/SKUtilities2/navMode //apple_ref/occ/data/navMode //apple_ref/occ/clconst/SKUtilities2/navMode " machineGenerated="true" --><span class="var">navMode</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/navMode;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/navMode;name=start --><p>Allows you to set the current kSKUNavModes type.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/navMode;name=end --><!-- end discussion -->
+</p>
+<p><b>Platforms:</b></p>
+<div class="list_indent"><dl>
+<dt><p>tvOS</p></dt>
+<dd></dd>
+</dl></div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="../../index.html#//apple_ref/c/tdef/kSKUNavModes" logicalPath="//apple_ref/c/tdef/kSKUNavModes" target="_top">kSKUNavModes</a></p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/navThresholdDistance;   name=SKUtilities2::navThresholdDistance --><a name="//apple_ref/occ/instp/SKUtilities2/navThresholdDistance"></a>
+<h3><a name="navThresholdDistance">navThresholdDistance</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/navThresholdDistance;name=start -->@property (<span class="param">nonatomic</span>) <!-- a logicalPath="//apple_ref/occ/cl/CGFloat //apple_ref/occ/tdef/CGFloat //apple_ref/occ/tag/CGFloat //apple_ref/occ/struct/CGFloat //apple_ref/occ/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <!-- a logicalPath="//apple_ref/occ/econst/navThresholdDistance //apple_ref/occ/data/SKUtilities2/navThresholdDistance //apple_ref/occ/data/navThresholdDistance //apple_ref/occ/clconst/SKUtilities2/navThresholdDistance " machineGenerated="true" --><span class="var">navThresholdDistance</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/navThresholdDistance;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/navThresholdDistance;name=start --><p>Change this value to change how sensitive the Siri remote is to movement. The concept is that from one navigation movement to another, this is the distance your touch must travel before signalling another navigational focus change. Higher values are less sensitive.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/navThresholdDistance;name=end --><!-- end discussion -->
+</p>
+<p><b>Platforms:</b></p>
+<div class="list_indent"><dl>
+<dt><p>tvOS</p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/touchTracker;   name=SKUtilities2::touchTracker --><a name="//apple_ref/occ/instp/SKUtilities2/touchTracker"></a>
+<h3><a name="touchTracker">touchTracker</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/touchTracker;name=start -->@property (<span class="param">nonatomic</span>,
+    <span class="param">strong</span>) <!-- a logicalPath="//apple_ref/occ/cl/NSMutableSet //apple_ref/occ/tdef/NSMutableSet //apple_ref/occ/tag/NSMutableSet //apple_ref/occ/struct/NSMutableSet //apple_ref/occ/intf/NSMutableSet //apple_ref/doc/anysymbol/NSMutableSet" machineGenerated="true" --><span class="type">NSMutableSet</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//apple_ref/occ/econst/touchTracker //apple_ref/occ/data/SKUtilities2/touchTracker //apple_ref/occ/data/touchTracker //apple_ref/occ/clconst/SKUtilities2/touchTracker " machineGenerated="true" --><span class="var">touchTracker</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/touchTracker;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/touchTracker;name=start --><p>Used internally to track current touches. Best not to touch.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/touchTracker;name=end --><!-- end discussion -->
+</p>
+<p><b>Platforms:</b></p>
+<div class="list_indent"><dl>
+<dt><p>tvOS</p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/userData;   name=SKUtilities2::userData --><a name="//apple_ref/occ/instp/SKUtilities2/userData"></a>
+<h3><a name="userData">userData</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/userData;name=start -->@property (<span class="param">nonatomic</span>,
+    <span class="param">strong</span>) <!-- a logicalPath="//apple_ref/occ/cl/NSMutableDictionary //apple_ref/occ/tdef/NSMutableDictionary //apple_ref/occ/tag/NSMutableDictionary //apple_ref/occ/struct/NSMutableDictionary //apple_ref/occ/intf/NSMutableDictionary //apple_ref/doc/anysymbol/NSMutableDictionary" machineGenerated="true" --><span class="type">NSMutableDictionary</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//apple_ref/occ/econst/userData //apple_ref/occ/data/SKUtilities2/userData //apple_ref/occ/data/userData //apple_ref/occ/clconst/SKUtilities2/userData " machineGenerated="true" --><span class="var">userData</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/userData;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/userData;name=start --><p>This mutable dictionary is similar in concept to the item of the same name on all SKNodes that Apple does, but on the singleton allows you to store objects for access game wide, not just on one node. It remains uninitialized until you initialize it.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/userData;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUtilities2/verbosityLevel;   name=SKUtilities2::verbosityLevel --><a name="//apple_ref/occ/instp/SKUtilities2/verbosityLevel"></a>
+<h3><a name="verbosityLevel">verbosityLevel</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/verbosityLevel;name=start -->@property (<span class="param">nonatomic</span>) <!-- a logicalPath="//apple_ref/occ/cl/NSInteger //apple_ref/occ/tdef/NSInteger //apple_ref/occ/tag/NSInteger //apple_ref/occ/struct/NSInteger //apple_ref/occ/intf/NSInteger //apple_ref/doc/anysymbol/NSInteger" machineGenerated="true" --><span class="type">NSInteger</span><!-- /a --> <!-- a logicalPath="//apple_ref/occ/econst/verbosityLevel //apple_ref/occ/data/SKUtilities2/verbosityLevel //apple_ref/occ/data/verbosityLevel //apple_ref/occ/clconst/SKUtilities2/verbosityLevel " machineGenerated="true" --><span class="var">verbosityLevel</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/verbosityLevel;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/verbosityLevel;name=start --><p>Used to determine if SKULogs print to the console. A value of 100 or more will automatically print notifications of SKScene deallocation. A value of 150 will print notifications of SKNode deallocation.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/verbosityLevel;name=end --><!-- end discussion -->
+</p>
+<p class="gapBeforeFooter">&nbsp;</p>
+<hr class="afterFooter">
+<div class="hd_copyright_and_timestamp">
+<p class="hd_timestamp">Last Updated: Monday, November 02, 2015
+</p>
+</div>
+</td>
+</tr></table>
+</body>
+</html>
