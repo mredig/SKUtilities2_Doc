@@ -311,6 +311,23 @@ function disclosure_triangle(elt) {
 </dl>
 </div>
 <p>&nbsp;</p>
+<h3>Initialization</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/clm/SKUButton/buttonWithImageNamed:" logicalPath="//apple_ref/occ/clm/SKUButton/buttonWithImageNamed:" target="_top">+buttonWithImageNamed:</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/clm/SKUButton/buttonWithPropertiesPackage:" logicalPath="//apple_ref/occ/clm/SKUButton/buttonWithPropertiesPackage:" target="_top">+buttonWithPropertiesPackage:</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/clm/SKUButton/buttonWithTexture:" logicalPath="//apple_ref/occ/clm/SKUButton/buttonWithTexture:" target="_top">+buttonWithTexture:</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUButton/didInitialize" logicalPath="//apple_ref/occ/instm/SKUButton/didInitialize" target="_top">-didInitialize</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
 <h3>Button actions</h3>
 <div class="group_desc_indent">
 </div>
@@ -326,23 +343,6 @@ function disclosure_triangle(elt) {
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUButton/setDownAction:toPerformOnTarget:" logicalPath="//apple_ref/occ/instm/SKUButton/setDownAction:toPerformOnTarget:" target="_top">-setDownAction:toPerformOnTarget:</a></tt></dt>
 <dd></dd>
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUButton/setUpAction:toPerformOnTarget:" logicalPath="//apple_ref/occ/instm/SKUButton/setUpAction:toPerformOnTarget:" target="_top">-setUpAction:toPerformOnTarget:</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
-<h3>Initialization</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/clm/SKUButton/buttonWithImageNamed:" logicalPath="//apple_ref/occ/clm/SKUButton/buttonWithImageNamed:" target="_top">+buttonWithImageNamed:</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/clm/SKUButton/buttonWithPropertiesPackage:" logicalPath="//apple_ref/occ/clm/SKUButton/buttonWithPropertiesPackage:" target="_top">+buttonWithPropertiesPackage:</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/clm/SKUButton/buttonWithTexture:" logicalPath="//apple_ref/occ/clm/SKUButton/buttonWithTexture:" target="_top">+buttonWithTexture:</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUButton/didInitialize" logicalPath="//apple_ref/occ/instm/SKUButton/didInitialize" target="_top">-didInitialize</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -626,8 +626,10 @@ While you can edit properties on the sprite itself, it is discouraged unless you
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/buttonMethod;name=start --><p>Used for enumeration of button ids 
-<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/buttonMethod;name=end --><!-- end discussion -->
 </p>
+<p>To get the same result in Swift, be sure to use rawValue
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/buttonMethod;name=end --><!-- end discussion -->
 <p><b>See Also</b></p>
 <div class="list_indent"><dl>
 <dt><p><a href="../../index.html#//apple_ref/c/tdef/kSKUButtonMethods" logicalPath="//apple_ref/c/tdef/kSKUButtonMethods" target="_top">kSKUButtonMethods</a></p></dt>
@@ -643,8 +645,10 @@ While you can edit properties on the sprite itself, it is discouraged unless you
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/buttonState;name=start --><p>Current state of the button
-<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/buttonState;name=end --><!-- end discussion -->
 </p>
+<p>To get the same result in Swift, be sure to use rawValue
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/buttonState;name=end --><!-- end discussion -->
 <p><b>See Also</b></p>
 <div class="list_indent"><dl>
 <dt><p><a href="../../index.html#//apple_ref/c/tdef/kSKUButtonStates" logicalPath="//apple_ref/c/tdef/kSKUButtonStates" target="_top">kSKUButtonStates</a></p></dt>
@@ -759,7 +763,7 @@ While you can edit properties on the sprite itself, it is discouraged unless you
 <p class="gapBeforeFooter">&nbsp;</p>
 <hr class="afterFooter">
 <div class="hd_copyright_and_timestamp">
-<p class="hd_timestamp">Last Updated: Sunday, November 08, 2015
+<p class="hd_timestamp">Last Updated: Monday, November 09, 2015
 </p>
 </div>
 </td>

@@ -276,6 +276,17 @@ function disclosure_triangle(elt) {
 <hr class="afterClassOrHeaderInfo">
 <br><a name="HeaderDoc_groups"><h2 class="h2tight">Groups</h2></a>
 
+<h3>Singleton</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/clm/SKUtilities2/sharedUtilities" logicalPath="//apple_ref/occ/clm/SKUtilities2/sharedUtilities" target="_top">+sharedUtilities</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
 <h3>Navigational</h3>
 <div class="group_desc_indent">
 </div>
@@ -294,17 +305,6 @@ function disclosure_triangle(elt) {
 <div class="group_indent">
 <dl>
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:" logicalPath="//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:" target="_top">-updateCurrentTime:</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
-<h3>Singleton</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/clm/SKUtilities2/sharedUtilities" logicalPath="//apple_ref/occ/clm/SKUtilities2/sharedUtilities" target="_top">+sharedUtilities</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -549,8 +549,10 @@ Vulnerable to lag spikes if used.
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/macButtonFlags;name=start --><p>Flags to determine what sort of mouse button is passed onto nodes. By default, it only passes left mouse button events, but adding other kSKUMouseButtonFlags flags allows to respond to other mouse buttons.
-<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/macButtonFlags;name=end --><!-- end discussion -->
 </p>
+<p>To get the same result in Swift, be sure to use rawValue
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/macButtonFlags;name=end --><!-- end discussion -->
 <p><b>Platforms:</b></p>
 <div class="list_indent"><dl>
 <dt><p>OSX</p></dt>
@@ -696,7 +698,7 @@ Vulnerable to lag spikes if used.
 <p class="gapBeforeFooter">&nbsp;</p>
 <hr class="afterFooter">
 <div class="hd_copyright_and_timestamp">
-<p class="hd_timestamp">Last Updated: Sunday, November 08, 2015
+<p class="hd_timestamp">Last Updated: Monday, November 09, 2015
 </p>
 </div>
 </td>

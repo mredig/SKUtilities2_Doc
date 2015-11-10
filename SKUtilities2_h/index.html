@@ -282,8 +282,49 @@ function disclosure_triangle(elt) {
 <p>Available for download at <a href="https://github.com/mredig/SKUtilities2" target="_top">GitHub</a></p>
 <p>Documentation available at <a href="http://mredig.github.io/SKUtilities2_Doc/" target="_top">GitHub Pages</a></p>
 
-<!-- headerDoc=discussion;uid=//apple_ref/doc/header/SKUtilities2.h;name=end --><!-- end discussion -->
-<hr class="afterClassOrHeaderInfo">
+<p></p>
+<h4>Miscellaneous:</h4>
+
+<p>
+</p>
+<ul>
+<li>
+<p>Run this as a script in a build phase to automatically increment build numbers
+  </p>
+<pre>
+ 
+ #!/bin/bash
+ bN=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$INFOPLIST_FILE")
+ bN=$((bN += 1))
+ bN=$(printf "%d" $bN)
+ /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $bN" "$INFOPLIST_FILE"
+ 
+ </pre>
+</li>
+
+<li><p>Header formatting for documentation can be referenced <a href="https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/tags/tags.html#//apple_ref/doc/uid/TP40001215-CH346-SW16" target="_top">here</a> and <a href="http://www.raywenderlich.com/66395/documenting-in-xcode-with-headerdoc-tutorial" target="_top">here</a></p></li>
+
+<li>
+<p>To activate mouse movement capture on OSX, use this line in Obj C
+</p>
+  <pre>
+ 
+ self.view.window.acceptsMouseMovedEvents = YES;
+ 
+ </pre>
+
+<p>or this line in Swift
+</p>
+  <pre>
+ 
+ self.view!.window!.acceptsMouseMovedEvents = true;
+ 
+ </pre>
+
+</li>
+
+</ul>
+<!-- headerDoc=discussion;uid=//apple_ref/doc/header/SKUtilities2.h;name=end --><!-- end discussion --><hr class="afterClassOrHeaderInfo">
 <br><a name="HeaderDoc_classes"></a>
 <h2 class="h2tight">Classes</h2>
 <dl>
@@ -331,30 +372,13 @@ function disclosure_triangle(elt) {
 <hr class="afterClassEmbeddedTOC">
 <br><a name="HeaderDoc_groups"><h2 class="h2tight">Groups</h2></a>
 
-<h3>Bezier Calculations</h3>
+<h3>Logging</h3>
 <div class="group_desc_indent">
 </div>
 <h4>Group members:</h4>
 <div class="group_indent">
 <dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/bezierPoint" logicalPath="//apple_ref/c/func/bezierPoint" target="_top">bezierPoint</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/bezierTValueAtXValue" logicalPath="//apple_ref/c/func/bezierTValueAtXValue" target="_top">bezierTValueAtXValue</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
-<h3>Distance Functions</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetween" logicalPath="//apple_ref/c/func/distanceBetween" target="_top">distanceBetween</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetweenIsWithinXDistance" logicalPath="//apple_ref/c/func/distanceBetweenIsWithinXDistance" target="_top">distanceBetweenIsWithinXDistance</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetweenIsWithinXDistancePreSquared" logicalPath="//apple_ref/c/func/distanceBetweenIsWithinXDistancePreSquared" target="_top">distanceBetweenIsWithinXDistancePreSquared</a></tt></dt>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/SKULog" logicalPath="//apple_ref/c/func/SKULog" target="_top">SKULog</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -372,21 +396,6 @@ function disclosure_triangle(elt) {
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/orientToFromRightFace" logicalPath="//apple_ref/c/func/orientToFromRightFace" target="_top">orientToFromRightFace</a></tt></dt>
 <dd></dd>
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/orientToFromUpFace" logicalPath="//apple_ref/c/func/orientToFromUpFace" target="_top">orientToFromUpFace</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
-<h3>SKUButton Enums</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonMethods" logicalPath="//apple_ref/c/tdef/kSKUButtonMethods" target="_top">kSKUButtonMethods</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonStates" logicalPath="//apple_ref/c/tdef/kSKUButtonStates" target="_top">kSKUButtonStates</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonTypes" logicalPath="//apple_ref/c/tdef/kSKUButtonTypes" target="_top">kSKUButtonTypes</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -428,6 +437,79 @@ function disclosure_triangle(elt) {
 </dl>
 </div>
 <p>&nbsp;</p>
+<h3>Common Constants</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/HIDDEN" logicalPath="//apple_ref/c/data/SKUtilities2.h/HIDDEN" target="_top">HIDDEN</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor" logicalPath="//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor" target="_top">kSKUDegToRadConvFactor</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUMouseButtonFlags" logicalPath="//apple_ref/c/tdef/kSKUMouseButtonFlags" target="_top">kSKUMouseButtonFlags</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUNavModes" logicalPath="//apple_ref/c/tdef/kSKUNavModes" target="_top">kSKUNavModes</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale" logicalPath="//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale" target="_top">kSKUPadFromPhoneScale</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale" logicalPath="//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale" target="_top">kSKUPadToPhoneScale</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale" logicalPath="//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale" target="_top">kSKUPhoneFromPadScale</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale" logicalPath="//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale" target="_top">kSKUPhoneToPadScale</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor" logicalPath="//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor" target="_top">kSKURadToDegConvFactor</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/SKUFont" logicalPath="//apple_ref/c/macro/SKUFont" target="_top">SKUFont</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/SKUFont_DONTLINK_0" logicalPath="//apple_ref/c/macro/SKUFont_DONTLINK_0" target="_top">SKUFont</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/SKUImage" logicalPath="//apple_ref/c/macro/SKUImage" target="_top">SKUImage</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/doc/title:macro/SKUImage_multideclaration_block" logicalPath="//apple_ref/doc/title:macro/SKUImage_multideclaration_block" target="_top">SKUImage_multideclaration_block</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/SKUSharedUtilities" logicalPath="//apple_ref/c/macro/SKUSharedUtilities" target="_top">SKUSharedUtilities</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/TARGET_OS_OSX_SKU" logicalPath="//apple_ref/c/macro/TARGET_OS_OSX_SKU" target="_top">TARGET_OS_OSX_SKU</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/VISIBLE" logicalPath="//apple_ref/c/data/SKUtilities2.h/VISIBLE" target="_top">VISIBLE</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>Number Interpolation</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/clipFloatWithinRange" logicalPath="//apple_ref/c/func/clipFloatWithinRange" target="_top">clipFloatWithinRange</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/clipIntegerWithinRange" logicalPath="//apple_ref/c/func/clipIntegerWithinRange" target="_top">clipIntegerWithinRange</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/linearInterpolationBetweenFloatValues" logicalPath="//apple_ref/c/func/linearInterpolationBetweenFloatValues" target="_top">linearInterpolationBetweenFloatValues</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/rampToValue" logicalPath="//apple_ref/c/func/rampToValue" target="_top">rampToValue</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/reverseLinearInterpolationBetweenFloatValues" logicalPath="//apple_ref/c/func/reverseLinearInterpolationBetweenFloatValues" target="_top">reverseLinearInterpolationBetweenFloatValues</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>Coordinate Format Conversions</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/getCGPointFromString" logicalPath="//apple_ref/c/func/getCGPointFromString" target="_top">getCGPointFromString</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/getStringFromPoint" logicalPath="//apple_ref/c/func/getStringFromPoint" target="_top">getStringFromPoint</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
 <h3>CGVector Helpers</h3>
 <div class="group_desc_indent">
 </div>
@@ -457,13 +539,45 @@ function disclosure_triangle(elt) {
 </dl>
 </div>
 <p>&nbsp;</p>
-<h3>Logging</h3>
+<h3>Distance Functions</h3>
 <div class="group_desc_indent">
 </div>
 <h4>Group members:</h4>
 <div class="group_indent">
 <dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/SKULog" logicalPath="//apple_ref/c/func/SKULog" target="_top">SKULog</a></tt></dt>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetween" logicalPath="//apple_ref/c/func/distanceBetween" target="_top">distanceBetween</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetweenIsWithinXDistance" logicalPath="//apple_ref/c/func/distanceBetweenIsWithinXDistance" target="_top">distanceBetweenIsWithinXDistance</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetweenIsWithinXDistancePreSquared" logicalPath="//apple_ref/c/func/distanceBetweenIsWithinXDistancePreSquared" target="_top">distanceBetweenIsWithinXDistancePreSquared</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>Bezier Calculations</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/bezierPoint" logicalPath="//apple_ref/c/func/bezierPoint" target="_top">bezierPoint</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/bezierTValueAtXValue" logicalPath="//apple_ref/c/func/bezierTValueAtXValue" target="_top">bezierTValueAtXValue</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>SKUButton Enums</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonMethods" logicalPath="//apple_ref/c/tdef/kSKUButtonMethods" target="_top">kSKUButtonMethods</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonStates" logicalPath="//apple_ref/c/tdef/kSKUButtonStates" target="_top">kSKUButtonStates</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonTypes" logicalPath="//apple_ref/c/tdef/kSKUButtonTypes" target="_top">kSKUButtonTypes</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -477,79 +591,6 @@ function disclosure_triangle(elt) {
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/randomFloatBetweenZeroAndHighend" logicalPath="//apple_ref/c/func/randomFloatBetweenZeroAndHighend" target="_top">randomFloatBetweenZeroAndHighend</a></tt></dt>
 <dd></dd>
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/randomUnsignedIntegerBetweenTwoValues" logicalPath="//apple_ref/c/func/randomUnsignedIntegerBetweenTwoValues" target="_top">randomUnsignedIntegerBetweenTwoValues</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
-<h3>Coordinate Format Conversions</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/getCGPointFromString" logicalPath="//apple_ref/c/func/getCGPointFromString" target="_top">getCGPointFromString</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/getStringFromPoint" logicalPath="//apple_ref/c/func/getStringFromPoint" target="_top">getStringFromPoint</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
-<h3>Common Constants</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/HIDDEN" logicalPath="//apple_ref/c/macro/HIDDEN" target="_top">HIDDEN</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKUDegToRadConvFactor" logicalPath="//apple_ref/c/macro/kSKUDegToRadConvFactor" target="_top">kSKUDegToRadConvFactor</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUMouseButtonFlags" logicalPath="//apple_ref/c/tdef/kSKUMouseButtonFlags" target="_top">kSKUMouseButtonFlags</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUNavModes" logicalPath="//apple_ref/c/tdef/kSKUNavModes" target="_top">kSKUNavModes</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKUPadFromPhoneScale" logicalPath="//apple_ref/c/macro/kSKUPadFromPhoneScale" target="_top">kSKUPadFromPhoneScale</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKUPadToPhoneScale" logicalPath="//apple_ref/c/macro/kSKUPadToPhoneScale" target="_top">kSKUPadToPhoneScale</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKUPhoneFromPadScale" logicalPath="//apple_ref/c/macro/kSKUPhoneFromPadScale" target="_top">kSKUPhoneFromPadScale</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKUPhoneToPadScale" logicalPath="//apple_ref/c/macro/kSKUPhoneToPadScale" target="_top">kSKUPhoneToPadScale</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKURadToDegConvFactor" logicalPath="//apple_ref/c/macro/kSKURadToDegConvFactor" target="_top">kSKURadToDegConvFactor</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/SKUFont" logicalPath="//apple_ref/c/macro/SKUFont" target="_top">SKUFont</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/SKUFont_DONTLINK_0" logicalPath="//apple_ref/c/macro/SKUFont_DONTLINK_0" target="_top">SKUFont</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/SKUImage" logicalPath="//apple_ref/c/macro/SKUImage" target="_top">SKUImage</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/doc/title:macro/SKUImage_multideclaration_block" logicalPath="//apple_ref/doc/title:macro/SKUImage_multideclaration_block" target="_top">SKUImage_multideclaration_block</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/SKUSharedUtilities" logicalPath="//apple_ref/c/macro/SKUSharedUtilities" target="_top">SKUSharedUtilities</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/TARGET_OS_OSX_SKU" logicalPath="//apple_ref/c/macro/TARGET_OS_OSX_SKU" target="_top">TARGET_OS_OSX_SKU</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/macro/VISIBLE" logicalPath="//apple_ref/c/macro/VISIBLE" target="_top">VISIBLE</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
-<h3>Number Interpolation</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/clipFloatWithinRange" logicalPath="//apple_ref/c/func/clipFloatWithinRange" target="_top">clipFloatWithinRange</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/clipIntegerWithinRange" logicalPath="//apple_ref/c/func/clipIntegerWithinRange" target="_top">clipIntegerWithinRange</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/linearInterpolationBetweenFloatValues" logicalPath="//apple_ref/c/func/linearInterpolationBetweenFloatValues" target="_top">linearInterpolationBetweenFloatValues</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/rampToValue" logicalPath="//apple_ref/c/func/rampToValue" target="_top">rampToValue</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/reverseLinearInterpolationBetweenFloatValues" logicalPath="//apple_ref/c/func/reverseLinearInterpolationBetweenFloatValues" target="_top">reverseLinearInterpolationBetweenFloatValues</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -2019,6 +2060,11 @@ function disclosure_triangle(elt) {
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/SKULog;name=start --><p>Prints text to the console using NSLog, but only prints if verbosityLevelRequired is lower than SKUSharedUtilities.verbosityLevel. Also only prints in compiler debug mode.
 <!-- headerDoc=discussion;uid=//apple_ref/c/func/SKULog;name=end --><!-- end discussion -->
 </p>
+<p><b>Language:</b></p>
+<div class="list_indent"><dl>
+<dt><p>Objective-C</p></dt>
+<dd></dd>
+</dl></div>
 <p><b>See Also</b></p>
 <div class="list_indent"><dl>
 <dt><p><a href="Classes/SKUtilities2/index.html#//apple_ref/occ/cl/SKUtilities2" logicalPath="//apple_ref/occ/cl/SKUtilities2" target="_top">SKUtilities2 verbosityLevel</a></p></dt>
@@ -2358,6 +2404,135 @@ function disclosure_triangle(elt) {
 <!-- headerDoc=discussion;uid=//apple_ref/c/func/vectorNormalize;name=end --><!-- end discussion -->
 </p>
 <hr class="betweenSections">
+<a name="HeaderDoc_constants"></a>
+<h2 class="h2tight">Constants</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/c/data/SKUtilities2.h/HIDDEN" target="_top">HIDDEN</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor" target="_top">kSKUDegToRadConvFactor</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale" target="_top">kSKUPadFromPhoneScale</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale" target="_top">kSKUPadToPhoneScale</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale" target="_top">kSKUPhoneFromPadScale</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale" target="_top">kSKUPhoneToPadScale</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor" target="_top">kSKURadToDegConvFactor</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/c/data/SKUtilities2.h/VISIBLE" target="_top">VISIBLE</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=data;  uid=//apple_ref/c/data/SKUtilities2.h/HIDDEN;   name=HIDDEN --><a name="//apple_ref/c/data/SKUtilities2.h/HIDDEN"></a>
+<h3><a name="HIDDEN">HIDDEN</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/HIDDEN;name=start --><span class="keyword">static</span> <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/BOOL //apple_ref/c/tdef/BOOL //apple_ref/c/tag/BOOL //apple_ref/c/struct/BOOL //apple_ref/c/intf/BOOL //apple_ref/doc/anysymbol/BOOL" machineGenerated="true" --><span class="type">BOOL</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/HIDDEN" logicalPath="//apple_ref/c/cl/HIDDEN //apple_ref/c/tdef/HIDDEN //apple_ref/c/tag/HIDDEN //apple_ref/c/struct/HIDDEN //apple_ref/c/intf/HIDDEN //apple_ref/doc/anysymbol/HIDDEN" target="_top"><span class="type">HIDDEN</span></a> = <span class="number">1</span>;  <!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/HIDDEN;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/HIDDEN;name=start --><p>BOOLEAN determining visibility
+For node.hidden properties, this is more intuitive than YES/NO
+ </p>
+<pre>
+ 
+ node.hidden = VISIBLE; //this is visible
+ node.hidden = HIDDEN; //this is hidden
+ 
+ </pre>
+<!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/HIDDEN;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=data;  uid=//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor;   name=kSKUDegToRadConvFactor --><a name="//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor"></a>
+<h3><a name="kSKUDegToRadConvFactor">kSKUDegToRadConvFactor</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor;name=start --><span class="keyword">static</span> <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor" logicalPath="//apple_ref/c/cl/kSKUDegToRadConvFactor //apple_ref/c/tdef/kSKUDegToRadConvFactor //apple_ref/c/tag/kSKUDegToRadConvFactor //apple_ref/c/struct/kSKUDegToRadConvFactor //apple_ref/c/intf/kSKUDegToRadConvFactor //apple_ref/doc/anysymbol/kSKUDegToRadConvFactor" target="_top"><span class="type">kSKUDegToRadConvFactor</span></a> = <span class="number">0</span>.<span class="number">017453292519943295</span>;  <span class="comment">// pi/180</span> <!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor;name=start --><p>Constant value to convert from degrees to radians. (0.017453292519943295)
+<!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=data;  uid=//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale;   name=kSKUPadFromPhoneScale --><a name="//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale"></a>
+<h3><a name="kSKUPadFromPhoneScale">kSKUPadFromPhoneScale</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale;name=start --><span class="keyword">static</span> <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale" logicalPath="//apple_ref/c/cl/kSKUPadFromPhoneScale //apple_ref/c/tdef/kSKUPadFromPhoneScale //apple_ref/c/tag/kSKUPadFromPhoneScale //apple_ref/c/struct/kSKUPadFromPhoneScale //apple_ref/c/intf/kSKUPadFromPhoneScale //apple_ref/doc/anysymbol/kSKUPadFromPhoneScale" target="_top"><span class="type">kSKUPadFromPhoneScale</span></a> = (
+    (
+        <span class="param">CGFloat</span>) <span class="number">2</span>.<span class="number">40003840061441</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale;name=start --><p>Constant approximate value (2.40003840061441) good for scaling assets.
+<!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=data;  uid=//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale;   name=kSKUPadToPhoneScale --><a name="//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale"></a>
+<h3><a name="kSKUPadToPhoneScale">kSKUPadToPhoneScale</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale;name=start --><span class="keyword">static</span> <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale" logicalPath="//apple_ref/c/cl/kSKUPadToPhoneScale //apple_ref/c/tdef/kSKUPadToPhoneScale //apple_ref/c/tag/kSKUPadToPhoneScale //apple_ref/c/struct/kSKUPadToPhoneScale //apple_ref/c/intf/kSKUPadToPhoneScale //apple_ref/doc/anysymbol/kSKUPadToPhoneScale" target="_top"><span class="type">kSKUPadToPhoneScale</span></a> = (
+    <span class="param">CGFloat</span>) <span class="number">0</span>.<span class="number">41666</span>;  <!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale;name=start --><p>Constant approximate value (0.41666) good for scaling assets.
+<!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=data;  uid=//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale;   name=kSKUPhoneFromPadScale --><a name="//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale"></a>
+<h3><a name="kSKUPhoneFromPadScale">kSKUPhoneFromPadScale</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale;name=start --><span class="keyword">static</span> <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale" logicalPath="//apple_ref/c/cl/kSKUPhoneFromPadScale //apple_ref/c/tdef/kSKUPhoneFromPadScale //apple_ref/c/tag/kSKUPhoneFromPadScale //apple_ref/c/struct/kSKUPhoneFromPadScale //apple_ref/c/intf/kSKUPhoneFromPadScale //apple_ref/doc/anysymbol/kSKUPhoneFromPadScale" target="_top"><span class="type">kSKUPhoneFromPadScale</span></a> = (
+    <span class="param">CGFloat</span>) <span class="number">0</span>.<span class="number">41666</span>;  <!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale;name=start --><p>Constant approximate value (0.41666) good for scaling assets.
+<!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=data;  uid=//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale;   name=kSKUPhoneToPadScale --><a name="//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale"></a>
+<h3><a name="kSKUPhoneToPadScale">kSKUPhoneToPadScale</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale;name=start --><span class="keyword">static</span> <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale" logicalPath="//apple_ref/c/cl/kSKUPhoneToPadScale //apple_ref/c/tdef/kSKUPhoneToPadScale //apple_ref/c/tag/kSKUPhoneToPadScale //apple_ref/c/struct/kSKUPhoneToPadScale //apple_ref/c/intf/kSKUPhoneToPadScale //apple_ref/doc/anysymbol/kSKUPhoneToPadScale" target="_top"><span class="type">kSKUPhoneToPadScale</span></a> = (
+    <span class="param">CGFloat</span>) <span class="number">2</span>.<span class="number">40003840061441</span>;  <span class="comment">//likely very low usage as it would be upscaling</span> <!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale;name=start --><p>Constant approximate value (2.40003840061441) good for scaling assets.
+<!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=data;  uid=//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor;   name=kSKURadToDegConvFactor --><a name="//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor"></a>
+<h3><a name="kSKURadToDegConvFactor">kSKURadToDegConvFactor</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor;name=start --><span class="keyword">static</span> <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor" logicalPath="//apple_ref/c/cl/kSKURadToDegConvFactor //apple_ref/c/tdef/kSKURadToDegConvFactor //apple_ref/c/tag/kSKURadToDegConvFactor //apple_ref/c/struct/kSKURadToDegConvFactor //apple_ref/c/intf/kSKURadToDegConvFactor //apple_ref/doc/anysymbol/kSKURadToDegConvFactor" target="_top"><span class="type">kSKURadToDegConvFactor</span></a> = <span class="number">57</span>.<span class="number">29577951308232</span>;  <span class="comment">// 180/pi</span> <!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor;name=start --><p>Constant value to convert from radians to degrees. (57.29577951308232)
+<!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=data;  uid=//apple_ref/c/data/SKUtilities2.h/VISIBLE;   name=VISIBLE --><a name="//apple_ref/c/data/SKUtilities2.h/VISIBLE"></a>
+<h3><a name="VISIBLE">VISIBLE</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/VISIBLE;name=start --><span class="keyword">static</span> <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/BOOL //apple_ref/c/tdef/BOOL //apple_ref/c/tag/BOOL //apple_ref/c/struct/BOOL //apple_ref/c/intf/BOOL //apple_ref/doc/anysymbol/BOOL" machineGenerated="true" --><span class="type">BOOL</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/data/SKUtilities2.h/VISIBLE" logicalPath="//apple_ref/c/cl/VISIBLE //apple_ref/c/tdef/VISIBLE //apple_ref/c/tag/VISIBLE //apple_ref/c/struct/VISIBLE //apple_ref/c/intf/VISIBLE //apple_ref/doc/anysymbol/VISIBLE" target="_top"><span class="type">VISIBLE</span></a> = <span class="number">0</span>;  <!-- headerDoc=declaration;uid=//apple_ref/c/data/SKUtilities2.h/VISIBLE;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/VISIBLE;name=start --><p>BOOLEAN determining visibility
+</p>
+<p>For node.hidden properties, this is more intuitive than YES/NO
+ </p>
+<pre>
+ 
+ node.hidden = VISIBLE; //this is visible
+ node.hidden = HIDDEN; //this is hidden
+ 
+ </pre>
+<!-- headerDoc=discussion;uid=//apple_ref/c/data/SKUtilities2.h/VISIBLE;name=end --><!-- end discussion -->
+<hr class="betweenSections">
 <a name="HeaderDoc_datatypes"></a>
 <h2 class="h2tight">Typedefs</h2>
 <dl>
@@ -2391,7 +2566,11 @@ function disclosure_triangle(elt) {
 <dt><a name="//apple_ref/c/econst/kSKUButtonMethodDelegate"><code>kSKUButtonMethodDelegate</code></a></dt>
 <dd><p>Calls doButtonDown or doButtonUp on the delegate, set with the delegate property. This is the only way to detech button releases that aren't within the bounds of the button.</p></dd>
 <dt><a name="//apple_ref/c/econst/kSKUButtonMethodRunActions"><code>kSKUButtonMethodRunActions</code></a></dt>
-<dd><p>Calls selectors set with methods setDownAction and setUpAction. Only sends button release calls if the release remained within the button bounds.</p></dd>
+<dd>
+<p>Calls selectors set with methods setDownAction and setUpAction. Only sends button release calls if the release remained within the button bounds.
+</p>
+<p>To get the same result in Swift, be sure to use rawValue</p>
+</dd>
 </dl>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
@@ -2431,7 +2610,11 @@ function disclosure_triangle(elt) {
 <dt><a name="//apple_ref/c/econst/kSKUButtonStateHovered"><code>kSKUButtonStateHovered</code></a></dt>
 <dd><p>Flagged when button is hovered. (This will either be an OS X mouse or a tvOS focus)</p></dd>
 <dt><a name="//apple_ref/c/econst/kSKUButtonStateDisabled"><code>kSKUButtonStateDisabled</code></a></dt>
-<dd><p>Flagged when the button is disabled.</p></dd>
+<dd>
+<p>Flagged when the button is disabled.
+</p>
+<p>To get the same result in Swift, be sure to use rawValue</p>
+</dd>
 </dl>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
@@ -2493,7 +2676,11 @@ function disclosure_triangle(elt) {
 <dt><a name="//apple_ref/c/econst/kSKUMouseButtonFlagRight"><code>kSKUMouseButtonFlagRight</code></a></dt>
 <dd><p>Flag for when right mouse is used.</p></dd>
 <dt><a name="//apple_ref/c/econst/kSKUMouseButtonFlagOther"><code>kSKUMouseButtonFlagOther</code></a></dt>
-<dd><p>Flag for when other mouse is used (mouse buttons 3 and greater).</p></dd>
+<dd>
+<p>Flag for when other mouse is used (mouse buttons 3 and greater).
+</p>
+<p>To get the same result in Swift, be sure to use rawValue</p>
+</dd>
 </dl>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
@@ -2550,20 +2737,6 @@ function disclosure_triangle(elt) {
 <a name="HeaderDoc_pdefines"></a>
 <h2 class="h2tight">Macro Definitions</h2>
 <dl>
-<dt><tt><a href="index.html#//apple_ref/c/macro/HIDDEN" target="_top">HIDDEN</a></tt></dt>
-<dd></dd>
-<dt><tt><a href="index.html#//apple_ref/c/macro/kSKUDegToRadConvFactor" target="_top">kSKUDegToRadConvFactor</a></tt></dt>
-<dd></dd>
-<dt><tt><a href="index.html#//apple_ref/c/macro/kSKUPadFromPhoneScale" target="_top">kSKUPadFromPhoneScale</a></tt></dt>
-<dd></dd>
-<dt><tt><a href="index.html#//apple_ref/c/macro/kSKUPadToPhoneScale" target="_top">kSKUPadToPhoneScale</a></tt></dt>
-<dd></dd>
-<dt><tt><a href="index.html#//apple_ref/c/macro/kSKUPhoneFromPadScale" target="_top">kSKUPhoneFromPadScale</a></tt></dt>
-<dd></dd>
-<dt><tt><a href="index.html#//apple_ref/c/macro/kSKUPhoneToPadScale" target="_top">kSKUPhoneToPadScale</a></tt></dt>
-<dd></dd>
-<dt><tt><a href="index.html#//apple_ref/c/macro/kSKURadToDegConvFactor" target="_top">kSKURadToDegConvFactor</a></tt></dt>
-<dd></dd>
 <dt><tt><a href="index.html#//apple_ref/c/macro/SKUFont" target="_top">SKUFont</a></tt></dt>
 <dd></dd>
 <dt><tt><a href="index.html#//apple_ref/c/macro/SKUFont_DONTLINK_0" target="_top">SKUFont</a></tt></dt>
@@ -2576,93 +2749,7 @@ function disclosure_triangle(elt) {
 <dd></dd>
 <dt><tt><a href="index.html#//apple_ref/c/macro/TARGET_OS_OSX_SKU" target="_top">TARGET_OS_OSX_SKU</a></tt></dt>
 <dd></dd>
-<dt><tt><a href="index.html#//apple_ref/c/macro/VISIBLE" target="_top">VISIBLE</a></tt></dt>
-<dd></dd>
 </dl>
-<hr class="betweenAPIEntries">
-<!-- headerDoc=macro;  uid=//apple_ref/c/macro/HIDDEN;   name=HIDDEN --><a name="//apple_ref/c/macro/HIDDEN"></a>
-<h3><a name="HIDDEN">HIDDEN</a></h3>
-<hr class="afterName">
-<div class="declaration_indent">
-<pre><!-- headerDoc=declaration;uid=//apple_ref/c/macro/HIDDEN;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//apple_ref/c/macro/HIDDEN" logicalPath="//apple_ref/c/cl/HIDDEN //apple_ref/c/tdef/HIDDEN //apple_ref/c/tag/HIDDEN //apple_ref/c/struct/HIDDEN //apple_ref/c/intf/HIDDEN //apple_ref/c/econst/HIDDEN //apple_ref/c/data/HIDDEN //apple_ref/c/clconst/HIDDEN //apple_ref/c/instm/HIDDEN //apple_ref/c/clm/HIDDEN //apple_ref/c/intfcm/HIDDEN //apple_ref/c/intfm/HIDDEN //apple_ref/c/func/HIDDEN //apple_ref/c/ftmplt/HIDDEN //apple_ref/c/defn/HIDDEN //apple_ref/c/macro/HIDDEN" target="_top"><span class="preprocessor">HIDDEN</span></a> <span class="preprocessor">1</span> <!-- headerDoc=declaration;uid=//apple_ref/c/macro/HIDDEN;name=end --></pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/HIDDEN;name=start --><p>BOOLEAN determining visibility
-For node.hidden properties, this is more intuitive than YES/NO
- </p>
-<pre>
- 
- node.hidden = VISIBLE; //this is visible
- node.hidden = HIDDEN; //this is hidden
- 
- </pre>
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/HIDDEN;name=end --><!-- end discussion -->
-<hr class="betweenAPIEntries">
-<!-- headerDoc=macro;  uid=//apple_ref/c/macro/kSKUDegToRadConvFactor;   name=kSKUDegToRadConvFactor --><a name="//apple_ref/c/macro/kSKUDegToRadConvFactor"></a>
-<h3><a name="kSKUDegToRadConvFactor">kSKUDegToRadConvFactor</a></h3>
-<hr class="afterName">
-<div class="declaration_indent">
-<pre><!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKUDegToRadConvFactor;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKUDegToRadConvFactor" logicalPath="//apple_ref/c/cl/kSKUDegToRadConvFactor //apple_ref/c/tdef/kSKUDegToRadConvFactor //apple_ref/c/tag/kSKUDegToRadConvFactor //apple_ref/c/struct/kSKUDegToRadConvFactor //apple_ref/c/intf/kSKUDegToRadConvFactor //apple_ref/c/econst/kSKUDegToRadConvFactor //apple_ref/c/data/kSKUDegToRadConvFactor //apple_ref/c/clconst/kSKUDegToRadConvFactor //apple_ref/c/instm/kSKUDegToRadConvFactor //apple_ref/c/clm/kSKUDegToRadConvFactor //apple_ref/c/intfcm/kSKUDegToRadConvFactor //apple_ref/c/intfm/kSKUDegToRadConvFactor //apple_ref/c/func/kSKUDegToRadConvFactor //apple_ref/c/ftmplt/kSKUDegToRadConvFactor //apple_ref/c/defn/kSKUDegToRadConvFactor //apple_ref/c/macro/kSKUDegToRadConvFactor" target="_top"><span class="preprocessor">kSKUDegToRadConvFactor</span></a> <span class="preprocessor">0</span><span class="preprocessor">.</span><span class="preprocessor">017453292519943295</span> <span class="comment"><span class="comment">//</span> <span class="comment">pi/180</span></span>  <!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKUDegToRadConvFactor;name=end --></pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKUDegToRadConvFactor;name=start --><p>Constant value to convert from degrees to radians. (0.017453292519943295)
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKUDegToRadConvFactor;name=end --><!-- end discussion -->
-</p>
-<hr class="betweenAPIEntries">
-<!-- headerDoc=macro;  uid=//apple_ref/c/macro/kSKUPadFromPhoneScale;   name=kSKUPadFromPhoneScale --><a name="//apple_ref/c/macro/kSKUPadFromPhoneScale"></a>
-<h3><a name="kSKUPadFromPhoneScale">kSKUPadFromPhoneScale</a></h3>
-<hr class="afterName">
-<div class="declaration_indent">
-<pre><!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKUPadFromPhoneScale;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKUPadFromPhoneScale" logicalPath="//apple_ref/c/cl/kSKUPadFromPhoneScale //apple_ref/c/tdef/kSKUPadFromPhoneScale //apple_ref/c/tag/kSKUPadFromPhoneScale //apple_ref/c/struct/kSKUPadFromPhoneScale //apple_ref/c/intf/kSKUPadFromPhoneScale //apple_ref/c/econst/kSKUPadFromPhoneScale //apple_ref/c/data/kSKUPadFromPhoneScale //apple_ref/c/clconst/kSKUPadFromPhoneScale //apple_ref/c/instm/kSKUPadFromPhoneScale //apple_ref/c/clm/kSKUPadFromPhoneScale //apple_ref/c/intfcm/kSKUPadFromPhoneScale //apple_ref/c/intfm/kSKUPadFromPhoneScale //apple_ref/c/func/kSKUPadFromPhoneScale //apple_ref/c/ftmplt/kSKUPadFromPhoneScale //apple_ref/c/defn/kSKUPadFromPhoneScale //apple_ref/c/macro/kSKUPadFromPhoneScale" target="_top"><span class="preprocessor">kSKUPadFromPhoneScale</span></a> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKUPadFromPhoneScale;name=end --></pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKUPadFromPhoneScale;name=start --><p>Constant approximate value (2.40003840061441) good for scaling assets.
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKUPadFromPhoneScale;name=end --><!-- end discussion -->
-</p>
-<hr class="betweenAPIEntries">
-<!-- headerDoc=macro;  uid=//apple_ref/c/macro/kSKUPadToPhoneScale;   name=kSKUPadToPhoneScale --><a name="//apple_ref/c/macro/kSKUPadToPhoneScale"></a>
-<h3><a name="kSKUPadToPhoneScale">kSKUPadToPhoneScale</a></h3>
-<hr class="afterName">
-<div class="declaration_indent">
-<pre><!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKUPadToPhoneScale;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKUPadToPhoneScale" logicalPath="//apple_ref/c/cl/kSKUPadToPhoneScale //apple_ref/c/tdef/kSKUPadToPhoneScale //apple_ref/c/tag/kSKUPadToPhoneScale //apple_ref/c/struct/kSKUPadToPhoneScale //apple_ref/c/intf/kSKUPadToPhoneScale //apple_ref/c/econst/kSKUPadToPhoneScale //apple_ref/c/data/kSKUPadToPhoneScale //apple_ref/c/clconst/kSKUPadToPhoneScale //apple_ref/c/instm/kSKUPadToPhoneScale //apple_ref/c/clm/kSKUPadToPhoneScale //apple_ref/c/intfcm/kSKUPadToPhoneScale //apple_ref/c/intfm/kSKUPadToPhoneScale //apple_ref/c/func/kSKUPadToPhoneScale //apple_ref/c/ftmplt/kSKUPadToPhoneScale //apple_ref/c/defn/kSKUPadToPhoneScale //apple_ref/c/macro/kSKUPadToPhoneScale" target="_top"><span class="preprocessor">kSKUPadToPhoneScale</span></a> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKUPadToPhoneScale;name=end --></pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKUPadToPhoneScale;name=start --><p>Constant approximate value (0.41666) good for scaling assets.
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKUPadToPhoneScale;name=end --><!-- end discussion -->
-</p>
-<hr class="betweenAPIEntries">
-<!-- headerDoc=macro;  uid=//apple_ref/c/macro/kSKUPhoneFromPadScale;   name=kSKUPhoneFromPadScale --><a name="//apple_ref/c/macro/kSKUPhoneFromPadScale"></a>
-<h3><a name="kSKUPhoneFromPadScale">kSKUPhoneFromPadScale</a></h3>
-<hr class="afterName">
-<div class="declaration_indent">
-<pre><!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKUPhoneFromPadScale;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKUPhoneFromPadScale" logicalPath="//apple_ref/c/cl/kSKUPhoneFromPadScale //apple_ref/c/tdef/kSKUPhoneFromPadScale //apple_ref/c/tag/kSKUPhoneFromPadScale //apple_ref/c/struct/kSKUPhoneFromPadScale //apple_ref/c/intf/kSKUPhoneFromPadScale //apple_ref/c/econst/kSKUPhoneFromPadScale //apple_ref/c/data/kSKUPhoneFromPadScale //apple_ref/c/clconst/kSKUPhoneFromPadScale //apple_ref/c/instm/kSKUPhoneFromPadScale //apple_ref/c/clm/kSKUPhoneFromPadScale //apple_ref/c/intfcm/kSKUPhoneFromPadScale //apple_ref/c/intfm/kSKUPhoneFromPadScale //apple_ref/c/func/kSKUPhoneFromPadScale //apple_ref/c/ftmplt/kSKUPhoneFromPadScale //apple_ref/c/defn/kSKUPhoneFromPadScale //apple_ref/c/macro/kSKUPhoneFromPadScale" target="_top"><span class="preprocessor">kSKUPhoneFromPadScale</span></a> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKUPhoneFromPadScale;name=end --></pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKUPhoneFromPadScale;name=start --><p>Constant approximate value (0.41666) good for scaling assets.
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKUPhoneFromPadScale;name=end --><!-- end discussion -->
-</p>
-<hr class="betweenAPIEntries">
-<!-- headerDoc=macro;  uid=//apple_ref/c/macro/kSKUPhoneToPadScale;   name=kSKUPhoneToPadScale --><a name="//apple_ref/c/macro/kSKUPhoneToPadScale"></a>
-<h3><a name="kSKUPhoneToPadScale">kSKUPhoneToPadScale</a></h3>
-<hr class="afterName">
-<div class="declaration_indent">
-<pre><!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKUPhoneToPadScale;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKUPhoneToPadScale" logicalPath="//apple_ref/c/cl/kSKUPhoneToPadScale //apple_ref/c/tdef/kSKUPhoneToPadScale //apple_ref/c/tag/kSKUPhoneToPadScale //apple_ref/c/struct/kSKUPhoneToPadScale //apple_ref/c/intf/kSKUPhoneToPadScale //apple_ref/c/econst/kSKUPhoneToPadScale //apple_ref/c/data/kSKUPhoneToPadScale //apple_ref/c/clconst/kSKUPhoneToPadScale //apple_ref/c/instm/kSKUPhoneToPadScale //apple_ref/c/clm/kSKUPhoneToPadScale //apple_ref/c/intfcm/kSKUPhoneToPadScale //apple_ref/c/intfm/kSKUPhoneToPadScale //apple_ref/c/func/kSKUPhoneToPadScale //apple_ref/c/ftmplt/kSKUPhoneToPadScale //apple_ref/c/defn/kSKUPhoneToPadScale //apple_ref/c/macro/kSKUPhoneToPadScale" target="_top"><span class="preprocessor">kSKUPhoneToPadScale</span></a> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span>  <!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKUPhoneToPadScale;name=end --></pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKUPhoneToPadScale;name=start --><p>Constant approximate value (2.40003840061441) good for scaling assets.
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKUPhoneToPadScale;name=end --><!-- end discussion -->
-</p>
-<hr class="betweenAPIEntries">
-<!-- headerDoc=macro;  uid=//apple_ref/c/macro/kSKURadToDegConvFactor;   name=kSKURadToDegConvFactor --><a name="//apple_ref/c/macro/kSKURadToDegConvFactor"></a>
-<h3><a name="kSKURadToDegConvFactor">kSKURadToDegConvFactor</a></h3>
-<hr class="afterName">
-<div class="declaration_indent">
-<pre><!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKURadToDegConvFactor;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//apple_ref/c/macro/kSKURadToDegConvFactor" logicalPath="//apple_ref/c/cl/kSKURadToDegConvFactor //apple_ref/c/tdef/kSKURadToDegConvFactor //apple_ref/c/tag/kSKURadToDegConvFactor //apple_ref/c/struct/kSKURadToDegConvFactor //apple_ref/c/intf/kSKURadToDegConvFactor //apple_ref/c/econst/kSKURadToDegConvFactor //apple_ref/c/data/kSKURadToDegConvFactor //apple_ref/c/clconst/kSKURadToDegConvFactor //apple_ref/c/instm/kSKURadToDegConvFactor //apple_ref/c/clm/kSKURadToDegConvFactor //apple_ref/c/intfcm/kSKURadToDegConvFactor //apple_ref/c/intfm/kSKURadToDegConvFactor //apple_ref/c/func/kSKURadToDegConvFactor //apple_ref/c/ftmplt/kSKURadToDegConvFactor //apple_ref/c/defn/kSKURadToDegConvFactor //apple_ref/c/macro/kSKURadToDegConvFactor" target="_top"><span class="preprocessor">kSKURadToDegConvFactor</span></a> <span class="preprocessor">57</span><span class="preprocessor">.</span><span class="preprocessor">29577951308232</span> <span class="comment"><span class="comment">//</span> <span class="comment">180/pi</span></span>  <!-- headerDoc=declaration;uid=//apple_ref/c/macro/kSKURadToDegConvFactor;name=end --></pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKURadToDegConvFactor;name=start --><p>Constant value to convert from radians to degrees. (57.29577951308232)
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/kSKURadToDegConvFactor;name=end --><!-- end discussion -->
-</p>
 <hr class="betweenAPIEntries">
 <!-- headerDoc=macro;  uid=//apple_ref/c/macro/SKUFont;   name=SKUFont --><a name="//apple_ref/c/macro/SKUFont"></a>
 <h3><a name="SKUFont">SKUFont</a></h3>
@@ -2673,8 +2760,22 @@ For node.hidden properties, this is more intuitive than YES/NO
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUFont;name=start --><p>Allows simplification between platforms, using similar classes.
 On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <i>SKUFont</i> and on OS X, remaps <i>NSImage</i> to <i>SKUImage</i> and <i>NSFont</i> to <i>SKUFont</i> as they are close enough that most methods work on all platforms. Also defines a constant that is only true on OS X for conditional targetting.
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUFont;name=end --><!-- end discussion -->
 </p>
+<p>To get the same result in Swift, use this in a global scope:
+  </p>
+<pre>
+ 
+ #if os(OSX)
+	typealias SKUImage = NSImage;
+	typealias SKUFont = NSFont;
+ #else
+	typealias SKUImage = UIImage;
+	typealias SKUFont = UIFont;
+ #endif
+ 
+ </pre>
+
+<!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUFont;name=end --><!-- end discussion -->
 <p><b>See Also</b></p>
 <div class="list_indent"><dl>
 <dt><p><a href="index.html#//apple_ref/doc/title:macro/SKUImage_multideclaration_block" logicalPath="//apple_ref/doc/title:macro/SKUImage_multideclaration_block" target="_top">SKUImage_multideclaration_block</a></p></dt>
@@ -2690,8 +2791,22 @@ On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUFont_DONTLINK_0;name=start --><p>Allows simplification between platforms, using similar classes.
 On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <i>SKUFont</i> and on OS X, remaps <i>NSImage</i> to <i>SKUImage</i> and <i>NSFont</i> to <i>SKUFont</i> as they are close enough that most methods work on all platforms. Also defines a constant that is only true on OS X for conditional targetting.
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUFont_DONTLINK_0;name=end --><!-- end discussion -->
 </p>
+<p>To get the same result in Swift, use this in a global scope:
+  </p>
+<pre>
+ 
+ #if os(OSX)
+	typealias SKUImage = NSImage;
+	typealias SKUFont = NSFont;
+ #else
+	typealias SKUImage = UIImage;
+	typealias SKUFont = UIFont;
+ #endif
+ 
+ </pre>
+
+<!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUFont_DONTLINK_0;name=end --><!-- end discussion -->
 <p><b>See Also</b></p>
 <div class="list_indent"><dl>
 <dt><p><a href="index.html#//apple_ref/doc/title:macro/SKUImage_multideclaration_block" logicalPath="//apple_ref/doc/title:macro/SKUImage_multideclaration_block" target="_top">SKUImage_multideclaration_block</a></p></dt>
@@ -2707,8 +2822,22 @@ On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUImage;name=start --><p>Allows simplification between platforms, using similar classes.
 On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <i>SKUFont</i> and on OS X, remaps <i>NSImage</i> to <i>SKUImage</i> and <i>NSFont</i> to <i>SKUFont</i> as they are close enough that most methods work on all platforms. Also defines a constant that is only true on OS X for conditional targetting.
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUImage;name=end --><!-- end discussion -->
 </p>
+<p>To get the same result in Swift, use this in a global scope:
+  </p>
+<pre>
+ 
+ #if os(OSX)
+	typealias SKUImage = NSImage;
+	typealias SKUFont = NSFont;
+ #else
+	typealias SKUImage = UIImage;
+	typealias SKUFont = UIFont;
+ #endif
+ 
+ </pre>
+
+<!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUImage;name=end --><!-- end discussion -->
 <p><b>See Also</b></p>
 <div class="list_indent"><dl>
 <dt><p><a href="index.html#//apple_ref/doc/title:macro/SKUImage_multideclaration_block" logicalPath="//apple_ref/doc/title:macro/SKUImage_multideclaration_block" target="_top">SKUImage_multideclaration_block</a></p></dt>
@@ -2732,8 +2861,27 @@ On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/doc/title:macro/SKUImage_multideclaration_block;name=start --><p>Allows simplification between platforms, using similar classes.
 On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <i>SKUFont</i> and on OS X, remaps <i>NSImage</i> to <i>SKUImage</i> and <i>NSFont</i> to <i>SKUFont</i> as they are close enough that most methods work on all platforms. Also defines a constant that is only true on OS X for conditional targetting.
-<!-- headerDoc=discussion;uid=//apple_ref/doc/title:macro/SKUImage_multideclaration_block;name=end --><!-- end discussion -->
 </p>
+<p>To get the same result in Swift, use this in a global scope:
+  </p>
+<pre>
+ 
+ #if os(OSX)
+	typealias SKUImage = NSImage;
+	typealias SKUFont = NSFont;
+ #else
+	typealias SKUImage = UIImage;
+	typealias SKUFont = UIFont;
+ #endif
+ 
+ </pre>
+
+<!-- headerDoc=discussion;uid=//apple_ref/doc/title:macro/SKUImage_multideclaration_block;name=end --><!-- end discussion -->
+<p><b>Language:</b></p>
+<div class="list_indent"><dl>
+<dt><p>Objective-C</p></dt>
+<dd></dd>
+</dl></div>
 <p><b>See Also</b></p>
 <div class="list_indent"><dl>
 <dt><p><a href="index.html#//apple_ref/c/macro/SKUFont" logicalPath="//apple_ref/c/macro/SKUFont" target="_top">SKUFont</a></p></dt>
@@ -2754,8 +2902,22 @@ On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUSharedUtilities;name=start --><p>Simplifies access to the singleton.
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUSharedUtilities;name=end --><!-- end discussion -->
 </p>
+<p>To get the same result in Swift, use this in a global scope:
+  </p>
+<pre>
+ 
+ let SKUSharedUtilities = SKUtilities2.sharedUtilities();
+ 
+ </pre>
+
+
+<!-- headerDoc=discussion;uid=//apple_ref/c/macro/SKUSharedUtilities;name=end --><!-- end discussion -->
+<p><b>Language:</b></p>
+<div class="list_indent"><dl>
+<dt><p>Objective-C</p></dt>
+<dd></dd>
+</dl></div>
 <hr class="betweenAPIEntries">
 <!-- headerDoc=macro;  uid=//apple_ref/c/macro/TARGET_OS_OSX_SKU;   name=TARGET_OS_OSX_SKU --><a name="//apple_ref/c/macro/TARGET_OS_OSX_SKU"></a>
 <h3><a name="TARGET_OS_OSX_SKU">TARGET_OS_OSX_SKU</a></h3>
@@ -2766,38 +2928,33 @@ On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/TARGET_OS_OSX_SKU;name=start --><p>Allows simplification between platforms, using similar classes.
 On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <i>SKUFont</i> and on OS X, remaps <i>NSImage</i> to <i>SKUImage</i> and <i>NSFont</i> to <i>SKUFont</i> as they are close enough that most methods work on all platforms. Also defines a constant that is only true on OS X for conditional targetting.
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/TARGET_OS_OSX_SKU;name=end --><!-- end discussion -->
 </p>
+<p>To get the same result in Swift, use this in a global scope:
+  </p>
+<pre>
+ 
+ #if os(OSX)
+	typealias SKUImage = NSImage;
+	typealias SKUFont = NSFont;
+ #else
+	typealias SKUImage = UIImage;
+	typealias SKUFont = UIFont;
+ #endif
+ 
+ </pre>
+
+<!-- headerDoc=discussion;uid=//apple_ref/c/macro/TARGET_OS_OSX_SKU;name=end --><!-- end discussion -->
 <p><b>See Also</b></p>
 <div class="list_indent"><dl>
 <dt><p><a href="index.html#//apple_ref/doc/title:macro/SKUImage_multideclaration_block" logicalPath="//apple_ref/doc/title:macro/SKUImage_multideclaration_block" target="_top">SKUImage_multideclaration_block</a></p></dt>
 <dd></dd>
 </dl></div>
-<hr class="betweenAPIEntries">
-<!-- headerDoc=macro;  uid=//apple_ref/c/macro/VISIBLE;   name=VISIBLE --><a name="//apple_ref/c/macro/VISIBLE"></a>
-<h3><a name="VISIBLE">VISIBLE</a></h3>
-<hr class="afterName">
-<div class="declaration_indent">
-<pre><!-- headerDoc=declaration;uid=//apple_ref/c/macro/VISIBLE;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//apple_ref/c/macro/VISIBLE" logicalPath="//apple_ref/c/cl/VISIBLE //apple_ref/c/tdef/VISIBLE //apple_ref/c/tag/VISIBLE //apple_ref/c/struct/VISIBLE //apple_ref/c/intf/VISIBLE //apple_ref/c/econst/VISIBLE //apple_ref/c/data/VISIBLE //apple_ref/c/clconst/VISIBLE //apple_ref/c/instm/VISIBLE //apple_ref/c/clm/VISIBLE //apple_ref/c/intfcm/VISIBLE //apple_ref/c/intfm/VISIBLE //apple_ref/c/func/VISIBLE //apple_ref/c/ftmplt/VISIBLE //apple_ref/c/defn/VISIBLE //apple_ref/c/macro/VISIBLE" target="_top"><span class="preprocessor">VISIBLE</span></a> <span class="preprocessor">0</span> <!-- headerDoc=declaration;uid=//apple_ref/c/macro/VISIBLE;name=end --></pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/macro/VISIBLE;name=start --><p>BOOLEAN determining visibility
-</p>
-<p>For node.hidden properties, this is more intuitive than YES/NO
- </p>
-<pre>
- 
- node.hidden = VISIBLE; //this is visible
- node.hidden = HIDDEN; //this is hidden
- 
- </pre>
-<!-- headerDoc=discussion;uid=//apple_ref/c/macro/VISIBLE;name=end --><!-- end discussion -->
 <p class="gapBeforeFooter">&nbsp;</p>
 <hr class="afterFooter">
 <div class="hd_copyright_and_timestamp">
 <p class="hd_copyright">&copy; 2015 Michael Redig - (See license file)
  </p>
-<p class="hd_timestamp">Last Updated: Sunday, November 08, 2015
+<p class="hd_timestamp">Last Updated: Monday, November 09, 2015
 </p>
 </div>
 </td>
