@@ -65,6 +65,7 @@
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/pointInterpolationLinearBetweenTwoPoints" target="_top">pointInterpolationLinearBetweenTwoPoints</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/pointInverse" target="_top">pointInverse</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/pointIsBehindVictim" target="_top">pointIsBehindVictim</a></li>
+<li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/pointIsZero" target="_top">pointIsZero</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/pointMultiplyByFactor" target="_top">pointMultiplyByFactor</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/pointMultiplyByPoint" target="_top">pointMultiplyByPoint</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/pointRelativeToScene" target="_top">pointRelativeToScene</a></li>
@@ -77,12 +78,14 @@
 
 <ul class="tocSubEntryList">
 <!-- C --><li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorAdd" target="_top">vectorAdd</a></li>
+<li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorDistance" target="_top">vectorDistance</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorFacingPoint" target="_top">vectorFacingPoint</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorFromCGPoint" target="_top">vectorFromCGPoint</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorFromCGSize" target="_top">vectorFromCGSize</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorFromDegree" target="_top">vectorFromDegree</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorFromRadian" target="_top">vectorFromRadian</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorInverse" target="_top">vectorInverse</a></li>
+<li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorIsZero" target="_top">vectorIsZero</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorMultiplyByFactor" target="_top">vectorMultiplyByFactor</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorMultiplyByVector" target="_top">vectorMultiplyByVector</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/vectorNormalize" target="_top">vectorNormalize</a></li>
@@ -107,6 +110,7 @@
 
 <ul class="tocSubEntryList">
 <!-- C --><li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/SKULog" target="_top">SKULog</a></li>
+<li class="tocSubEntry"><a href="index.html#//apple_ref/c/func/SKULogBinary" target="_top">SKULogBinary</a></li>
 </ul>
 <span class="hd_tocGroupSpace">&nbsp;<br></span>
 <span class="hd_tocGroup">Number Interpolation</span>
@@ -150,7 +154,10 @@
 <span class="hd_tocGroup">Common Constants</span>
 
 <ul class="tocSubEntryList">
-<!-- public --><li class="tocSubEntry"><a href="index.html#//apple_ref/c/tdef/kSKUMouseButtonFlags" target="_top">kSKUMouseButtonFlags</a></li>
+<!-- public --><li class="tocSubEntry"><a href="index.html#//apple_ref/c/tdef/kSKUGamepadButtonStates" target="_top">kSKUGamepadButtonStates</a></li>
+<li class="tocSubEntry"><a href="index.html#//apple_ref/c/tdef/kSKUGamePadInputs" target="_top">kSKUGamePadInputs</a></li>
+<li class="tocSubEntry"><a href="index.html#//apple_ref/c/tdef/kSKUGamePadPlayerFlags" target="_top">kSKUGamePadPlayerFlags</a></li>
+<li class="tocSubEntry"><a href="index.html#//apple_ref/c/tdef/kSKUMouseButtonFlags" target="_top">kSKUMouseButtonFlags</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/tdef/kSKUNavModes" target="_top">kSKUNavModes</a></li>
 </ul>
 <span class="hd_tocGroupSpace">&nbsp;<br></span>
@@ -179,11 +186,14 @@
 <ul class="tocSubEntryList">
 <!-- public --><li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/SKUtilities2.h/HIDDEN" target="_top">HIDDEN</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUDegToRadConvFactor" target="_top">kSKUDegToRadConvFactor</a></li>
+<li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/kSKUNavConstantCurrentFocusedNode" target="_top">kSKUNavConstantCurrentFocusedNode</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPadFromPhoneScale" target="_top">kSKUPadFromPhoneScale</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPadToPhoneScale" target="_top">kSKUPadToPhoneScale</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPhoneFromPadScale" target="_top">kSKUPhoneFromPadScale</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKUPhoneToPadScale" target="_top">kSKUPhoneToPadScale</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/SKUtilities2.h/kSKURadToDegConvFactor" target="_top">kSKURadToDegConvFactor</a></li>
+<li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/kSKURemoteInteractionOff" target="_top">kSKURemoteInteractionOff</a></li>
+<li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/kSKURemoteInteractionOn" target="_top">kSKURemoteInteractionOn</a></li>
 <li class="tocSubEntry"><a href="index.html#//apple_ref/c/data/SKUtilities2.h/VISIBLE" target="_top">VISIBLE</a></li>
 </ul>
 </div>
@@ -227,6 +237,8 @@
 <li class="tocSubEntry"><a href="Classes/SKUButtonLabelPropertiesPackage/index.html#//apple_ref/occ/cl/SKUButtonLabelPropertiesPackage" target="_top">SKUButtonLabelPropertiesPackage</a></li>
 <li class="tocSubEntry"><a href="Classes/SKUButtonSpriteStateProperties/index.html#//apple_ref/occ/cl/SKUButtonSpriteStateProperties" target="_top">SKUButtonSpriteStateProperties</a></li>
 <li class="tocSubEntry"><a href="Classes/SKUButtonSpriteStatePropertiesPackage/index.html#//apple_ref/occ/cl/SKUButtonSpriteStatePropertiesPackage" target="_top">SKUButtonSpriteStatePropertiesPackage</a></li>
+<li class="tocSubEntry"><a href="Classes/SKUGameControllerState/index.html#//apple_ref/occ/cl/SKUGameControllerState" target="_top">SKUGameControllerState</a></li>
+<li class="tocSubEntry"><a href="Classes/SKUGCControllerController/index.html#//apple_ref/occ/cl/SKUGCControllerController" target="_top">SKUGCControllerController</a></li>
 <li class="tocSubEntry"><a href="Classes/SKUMultiLineLabelNode/index.html#//apple_ref/occ/cl/SKUMultiLineLabelNode" target="_top">SKUMultiLineLabelNode</a></li>
 <li class="tocSubEntry"><a href="Classes/SKUNode/index.html#//apple_ref/occ/cl/SKUNode" target="_top">SKUNode</a></li>
 <li class="tocSubEntry"><a href="Classes/SKUPositionObject/index.html#//apple_ref/occ/cl/SKUPositionObject" target="_top">SKUPositionObject</a></li>
@@ -237,6 +249,7 @@
 <li class="tocSubEntry"><a href="Classes/SKUSpriteNode/index.html#//apple_ref/occ/cl/SKUSpriteNode" target="_top">SKUSpriteNode</a></li>
 <li class="tocSubEntry"><a href="Classes/SKUtilities2/index.html#//apple_ref/occ/cl/SKUtilities2" target="_top">SKUtilities2</a></li>
 <li class="tocSubEntry"><a href="Classes/SKUToggleButton/index.html#//apple_ref/occ/cl/SKUToggleButton" target="_top">SKUToggleButton</a></li>
+<li class="tocSubEntry"><a href="Classes/SKUViewController/index.html#//apple_ref/occ/cl/SKUViewController" target="_top">SKUViewController</a></li>
 </ul>
 </div>
 </div>
@@ -267,8 +280,8 @@
 <div toc="collapsible" class="collapsible">
 <ul class="tocSubEntryList">
 <!-- from class --><li class="tocSubEntry"><a href="Categories/SKColor_Mixing_/index.html#//apple_ref/occ/cat/SKColor(Mixing)" target="_top">SKColor(Mixing)</a></li>
-<li class="tocSubEntry"><a href="Categories/SKNode_ConsolidatedInput_/index.html#//apple_ref/occ/cat/SKNode(ConsolidatedInput)" target="_top">SKNode(ConsolidatedInput)</a></li>
-<li class="tocSubEntry"><a href="Categories/SKView_AdditionalMouseSupport_/index.html#//apple_ref/occ/cat/SKView(AdditionalMouseSupport)" target="_top">SKView(AdditionalMouseSupport)</a></li>
+<li class="tocSubEntry"><a href="Categories/SKNode_SKUModifications_/index.html#//apple_ref/occ/cat/SKNode(SKUModifications)" target="_top">SKNode(SKUModifications)</a></li>
+<li class="tocSubEntry"><a href="Categories/SKView_SKUModifications_/index.html#//apple_ref/occ/cat/SKView(SKUModifications)" target="_top">SKView(SKUModifications)</a></li>
 </ul>
 </div>
 </div>
