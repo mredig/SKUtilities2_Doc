@@ -538,6 +538,8 @@ Behaves similarly in subclasses, but also applies to the additional state packag
 <dd></dd>
 <dt><tt><a href="index.html#//apple_ref/occ/instp/SKUButton/baseSpritePropertiesHovered" target="_top">baseSpritePropertiesHovered</a></tt></dt>
 <dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUButton/baseSpritePropertiesPackage" target="_top">baseSpritePropertiesPackage</a></tt></dt>
+<dd></dd>
 <dt><tt><a href="index.html#//apple_ref/occ/instp/SKUButton/baseSpritePropertiesPressed" target="_top">baseSpritePropertiesPressed</a></tt></dt>
 <dd></dd>
 <dt><tt><a href="index.html#//apple_ref/occ/instp/SKUButton/buttonMethod" target="_top">buttonMethod</a></tt></dt>
@@ -555,8 +557,6 @@ Behaves similarly in subclasses, but also applies to the additional state packag
 <dt><tt><a href="index.html#//apple_ref/occ/instp/SKUButton/notificationNameDown" target="_top">notificationNameDown</a></tt></dt>
 <dd></dd>
 <dt><tt><a href="index.html#//apple_ref/occ/instp/SKUButton/notificationNameUp" target="_top">notificationNameUp</a></tt></dt>
-<dd></dd>
-<dt><tt><a href="index.html#//apple_ref/occ/instp/SKUButton/padding" target="_top">padding</a></tt></dt>
 <dd></dd>
 <dt><tt><a href="index.html#//apple_ref/occ/instp/SKUButton/sizeMinimumBoundary" target="_top">sizeMinimumBoundary</a></tt></dt>
 <dd></dd>
@@ -606,6 +606,16 @@ While you can edit properties on the sprite itself, it is discouraged unless you
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/baseSpritePropertiesHovered;name=start --><p>Properties to use on the base sprite in hovered state. <!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/baseSpritePropertiesHovered;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUButton/baseSpritePropertiesPackage;   name=SKUButton::baseSpritePropertiesPackage --><a name="//apple_ref/occ/instp/SKUButton/baseSpritePropertiesPackage"></a>
+<h3><a name="baseSpritePropertiesPackage">baseSpritePropertiesPackage</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUButton/baseSpritePropertiesPackage;name=start -->@property (<span class="param">nonatomic</span>) <a machinegenerated="true" href="../SKUButtonSpriteStatePropertiesPackage/index.html#//apple_ref/occ/cl/SKUButtonSpriteStatePropertiesPackage" logicalPath="//apple_ref/occ/cl/SKUButtonSpriteStatePropertiesPackage" target="_top"><span class="type">SKUButtonSpriteStatePropertiesPackage</span></a><span class="type">*</span> <!-- a logicalPath="//apple_ref/occ/econst/baseSpritePropertiesPackage //apple_ref/occ/data/SKUButton/baseSpritePropertiesPackage //apple_ref/occ/data/baseSpritePropertiesPackage //apple_ref/occ/clconst/SKUButton/baseSpritePropertiesPackage " machineGenerated="true" --><span class="var">baseSpritePropertiesPackage</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUButton/baseSpritePropertiesPackage;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/baseSpritePropertiesPackage;name=start --><p>Readonly access to a package for the base sprite properties <!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/baseSpritePropertiesPackage;name=end --><!-- end discussion -->
 </p>
 <hr class="betweenAPIEntries">
 <!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUButton/baseSpritePropertiesPressed;   name=SKUButton::baseSpritePropertiesPressed --><a name="//apple_ref/occ/instp/SKUButton/baseSpritePropertiesPressed"></a>
@@ -731,16 +741,6 @@ While you can edit properties on the sprite itself, it is discouraged unless you
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/notificationNameUp;name=start --><p>If button is set to send notifications, this is the name of the notification. Can set the name here as well. <!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/notificationNameUp;name=end --><!-- end discussion -->
 </p>
 <hr class="betweenAPIEntries">
-<!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUButton/padding;   name=SKUButton::padding --><a name="//apple_ref/occ/instp/SKUButton/padding"></a>
-<h3><a name="padding">padding</a></h3>
-<hr class="afterName">
-<div class="declaration_indent">
-<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUButton/padding;name=start -->@property (<span class="param">nonatomic</span>) <!-- a logicalPath="//apple_ref/occ/cl/CGFloat //apple_ref/occ/tdef/CGFloat //apple_ref/occ/tag/CGFloat //apple_ref/occ/struct/CGFloat //apple_ref/occ/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <!-- a logicalPath="//apple_ref/occ/econst/padding //apple_ref/occ/data/SKUButton/padding //apple_ref/occ/data/padding //apple_ref/occ/clconst/SKUButton/padding " machineGenerated="true" --><span class="var">padding</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUButton/padding;name=end --></pre>
-</div>
-<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/padding;name=start --><p>Used for padding around buttons when using centerRect to scale imagery. Defaults to 30.0f <!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/padding;name=end --><!-- end discussion -->
-</p>
-<hr class="betweenAPIEntries">
 <!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUButton/sizeMinimumBoundary;   name=SKUButton::sizeMinimumBoundary --><a name="//apple_ref/occ/instp/SKUButton/sizeMinimumBoundary"></a>
 <h3><a name="sizeMinimumBoundary">sizeMinimumBoundary</a></h3>
 <hr class="afterName">
@@ -748,7 +748,7 @@ While you can edit properties on the sprite itself, it is discouraged unless you
 <pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUButton/sizeMinimumBoundary;name=start -->@property (<span class="param">nonatomic</span>) <!-- a logicalPath="//apple_ref/occ/cl/CGSize //apple_ref/occ/tdef/CGSize //apple_ref/occ/tag/CGSize //apple_ref/occ/struct/CGSize //apple_ref/occ/intf/CGSize //apple_ref/doc/anysymbol/CGSize" machineGenerated="true" --><span class="type">CGSize</span><!-- /a --> <!-- a logicalPath="//apple_ref/occ/econst/sizeMinimumBoundary //apple_ref/occ/data/SKUButton/sizeMinimumBoundary //apple_ref/occ/data/sizeMinimumBoundary //apple_ref/occ/clconst/SKUButton/sizeMinimumBoundary " machineGenerated="true" --><span class="var">sizeMinimumBoundary</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUButton/sizeMinimumBoundary;name=end --></pre>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/sizeMinimumBoundary;name=start --><p>Establishes the smallest possible area the button can take up (not accounting for properties with centerRect set that automatically expand). This is the same thing as setting the size property. It only exists to document clarity.  <!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/sizeMinimumBoundary;name=end --><!-- end discussion -->
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/sizeMinimumBoundary;name=start --><p>Establishes the smallest possible area the button can take up (not accounting for properties with centerRect set that automatically expand). This is the same thing as setting the size property. It only exists to document clarity. <!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUButton/sizeMinimumBoundary;name=end --><!-- end discussion -->
 </p>
 <hr class="betweenAPIEntries">
 <!-- headerDoc=instp;  uid=//apple_ref/occ/instp/SKUButton/whichButton;   name=SKUButton::whichButton --><a name="//apple_ref/occ/instp/SKUButton/whichButton"></a>
@@ -763,7 +763,7 @@ While you can edit properties on the sprite itself, it is discouraged unless you
 <p class="gapBeforeFooter">&nbsp;</p>
 <hr class="afterFooter">
 <div class="hd_copyright_and_timestamp">
-<p class="hd_timestamp">Last Updated: Saturday, January 09, 2016
+<p class="hd_timestamp">Last Updated: Sunday, January 17, 2016
 </p>
 </div>
 </td>

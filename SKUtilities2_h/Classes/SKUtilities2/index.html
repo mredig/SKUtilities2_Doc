@@ -302,6 +302,17 @@ function disclosure_triangle(elt) {
 </dl>
 </div>
 <p>&nbsp;</p>
+<h3>Navigational</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUtilities2/setNavFocus:" logicalPath="//apple_ref/occ/instm/SKUtilities2/setNavFocus:" target="_top">-setNavFocus:</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
 <h3>Time</h3>
 <div class="group_desc_indent">
 </div>
@@ -311,17 +322,6 @@ function disclosure_triangle(elt) {
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUtilities2/idleTimerEnable:" logicalPath="//apple_ref/occ/instm/SKUtilities2/idleTimerEnable:" target="_top">-idleTimerEnable:</a></tt></dt>
 <dd></dd>
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:" logicalPath="//apple_ref/occ/instm/SKUtilities2/updateCurrentTime:" target="_top">-updateCurrentTime:</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
-<h3>Navigational</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/occ/instm/SKUtilities2/setNavFocus:" logicalPath="//apple_ref/occ/instm/SKUtilities2/setNavFocus:" target="_top">-setNavFocus:</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -612,7 +612,8 @@ Vulnerable to lag spikes if used.
 <h3><a name="navFocus">navFocus</a></h3>
 <hr class="afterName">
 <div class="declaration_indent">
-<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/navFocus;name=start -->@property (<span class="param">nonatomic</span>) <!-- a logicalPath="//apple_ref/occ/cl/SKNode //apple_ref/occ/tdef/SKNode //apple_ref/occ/tag/SKNode //apple_ref/occ/struct/SKNode //apple_ref/occ/intf/SKNode //apple_ref/doc/anysymbol/SKNode" machineGenerated="true" --><span class="type">SKNode</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//apple_ref/occ/econst/navFocus //apple_ref/occ/data/SKUtilities2/navFocus //apple_ref/occ/data/navFocus //apple_ref/occ/clconst/SKUtilities2/navFocus " machineGenerated="true" --><span class="var">navFocus</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/navFocus;name=end --></pre>
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/navFocus;name=start -->@property (<span class="param">nonatomic</span>,
+    <span class="param">weak</span>) <!-- a logicalPath="//apple_ref/occ/cl/SKNode //apple_ref/occ/tdef/SKNode //apple_ref/occ/tag/SKNode //apple_ref/occ/struct/SKNode //apple_ref/occ/intf/SKNode //apple_ref/doc/anysymbol/SKNode" machineGenerated="true" --><span class="type">SKNode</span><!-- /a --><span class="type">*</span> <!-- a logicalPath="//apple_ref/occ/econst/navFocus //apple_ref/occ/data/SKUtilities2/navFocus //apple_ref/occ/data/navFocus //apple_ref/occ/clconst/SKUtilities2/navFocus " machineGenerated="true" --><span class="var">navFocus</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/instp/SKUtilities2/navFocus;name=end --></pre>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/navFocus;name=start --><p>Allows for access to and setting the current navFocus node.
@@ -648,7 +649,7 @@ Vulnerable to lag spikes if used.
 <!-- headerDoc=discussion;uid=//apple_ref/occ/instp/SKUtilities2/navFocus;name=end --><!-- end discussion -->
 <p><b>See Also</b></p>
 <div class="list_indent"><dl>
-<dt><p><!-- a logicalPath="//apple_ref/occ/cl/SKNode(ConsolidatedInput //apple_ref/occ/tdef/SKNode(ConsolidatedInput //apple_ref/occ/tag/SKNode(ConsolidatedInput //apple_ref/occ/struct/SKNode(ConsolidatedInput //apple_ref/occ/intf/SKNode(ConsolidatedInput //apple_ref/occ/econst/SKNode(ConsolidatedInput //apple_ref/occ/data/SKNode(ConsolidatedInput //apple_ref/occ/clconst/SKNode(ConsolidatedInput //apple_ref/occ/instm/SKNode(ConsolidatedInput //apple_ref/occ/clm/SKNode(ConsolidatedInput //apple_ref/occ/intfcm/SKNode(ConsolidatedInput //apple_ref/occ/intfm/SKNode(ConsolidatedInput //apple_ref/occ/func/SKNode(ConsolidatedInput //apple_ref/occ/ftmplt/SKNode(ConsolidatedInput //apple_ref/occ/defn/SKNode(ConsolidatedInput //apple_ref/occ/macro/SKNode(ConsolidatedInput //apple_ref/doc/com/intfm/SKNode(ConsolidatedInput //apple_ref/doc/anysymbol/SKNode(ConsolidatedInput" -->SKNode(ConsolidatedInput)<!-- /a --></p></dt>
+<dt><p><a href="../../Categories/SKNode_SKUModifications_/index.html#//apple_ref/occ/cat/SKNode(SKUModifications)" logicalPath="//apple_ref/occ/cat/SKNode(SKUModifications)" target="_top">SKNode(SKUModifications)</a></p></dt>
 <dd></dd>
 </dl></div>
 <hr class="betweenAPIEntries">
@@ -726,7 +727,7 @@ Vulnerable to lag spikes if used.
 <p class="gapBeforeFooter">&nbsp;</p>
 <hr class="afterFooter">
 <div class="hd_copyright_and_timestamp">
-<p class="hd_timestamp">Last Updated: Saturday, January 09, 2016
+<p class="hd_timestamp">Last Updated: Sunday, January 17, 2016
 </p>
 </div>
 </td>

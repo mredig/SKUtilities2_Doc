@@ -425,15 +425,19 @@ function disclosure_triangle(elt) {
 </dl>
 </div>
 <p>&nbsp;</p>
-<h3>Random Numbers</h3>
+<h3>Bezier Calculations</h3>
 <div class="group_desc_indent">
 </div>
 <h4>Group members:</h4>
 <div class="group_indent">
 <dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/randomFloatBetweenZeroAndHighend" logicalPath="//apple_ref/c/func/randomFloatBetweenZeroAndHighend" target="_top">randomFloatBetweenZeroAndHighend</a></tt></dt>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/bezierPoint" logicalPath="//apple_ref/c/func/bezierPoint" target="_top">bezierPoint</a></tt></dt>
 <dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/randomUnsignedIntegerBetweenTwoValues" logicalPath="//apple_ref/c/func/randomUnsignedIntegerBetweenTwoValues" target="_top">randomUnsignedIntegerBetweenTwoValues</a></tt></dt>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/bezierTValueAtXValue" logicalPath="//apple_ref/c/func/bezierTValueAtXValue" target="_top">bezierTValueAtXValue</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/centerOSCursorInWindow" logicalPath="//apple_ref/c/func/centerOSCursorInWindow" target="_top">centerOSCursorInWindow</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/hideOSCursor" logicalPath="//apple_ref/c/func/hideOSCursor" target="_top">hideOSCursor</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -447,38 +451,6 @@ function disclosure_triangle(elt) {
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/SKULog" logicalPath="//apple_ref/c/func/SKULog" target="_top">SKULog</a></tt></dt>
 <dd></dd>
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/SKULogBinary" logicalPath="//apple_ref/c/func/SKULogBinary" target="_top">SKULogBinary</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
-<h3>SKUButton Enums</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonMethods" logicalPath="//apple_ref/c/tdef/kSKUButtonMethods" target="_top">kSKUButtonMethods</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonStates" logicalPath="//apple_ref/c/tdef/kSKUButtonStates" target="_top">kSKUButtonStates</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonTypes" logicalPath="//apple_ref/c/tdef/kSKUButtonTypes" target="_top">kSKUButtonTypes</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
-<h3>Orientation</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/orientToFromDownFace" logicalPath="//apple_ref/c/func/orientToFromDownFace" target="_top">orientToFromDownFace</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/orientToFromLeftFace" logicalPath="//apple_ref/c/func/orientToFromLeftFace" target="_top">orientToFromLeftFace</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/orientToFromRightFace" logicalPath="//apple_ref/c/func/orientToFromRightFace" target="_top">orientToFromRightFace</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/orientToFromUpFace" logicalPath="//apple_ref/c/func/orientToFromUpFace" target="_top">orientToFromUpFace</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -536,21 +508,6 @@ function disclosure_triangle(elt) {
 </dl>
 </div>
 <p>&nbsp;</p>
-<h3>Distance Functions</h3>
-<div class="group_desc_indent">
-</div>
-<h4>Group members:</h4>
-<div class="group_indent">
-<dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetween" logicalPath="//apple_ref/c/func/distanceBetween" target="_top">distanceBetween</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetweenIsWithinXDistance" logicalPath="//apple_ref/c/func/distanceBetweenIsWithinXDistance" target="_top">distanceBetweenIsWithinXDistance</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetweenIsWithinXDistancePreSquared" logicalPath="//apple_ref/c/func/distanceBetweenIsWithinXDistancePreSquared" target="_top">distanceBetweenIsWithinXDistancePreSquared</a></tt></dt>
-<dd></dd>
-</dl>
-</div>
-<p>&nbsp;</p>
 <h3>CGVector Helpers</h3>
 <div class="group_desc_indent">
 </div>
@@ -584,6 +541,23 @@ function disclosure_triangle(elt) {
 </dl>
 </div>
 <p>&nbsp;</p>
+<h3>Orientation</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/orientToFromDownFace" logicalPath="//apple_ref/c/func/orientToFromDownFace" target="_top">orientToFromDownFace</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/orientToFromLeftFace" logicalPath="//apple_ref/c/func/orientToFromLeftFace" target="_top">orientToFromLeftFace</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/orientToFromRightFace" logicalPath="//apple_ref/c/func/orientToFromRightFace" target="_top">orientToFromRightFace</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/orientToFromUpFace" logicalPath="//apple_ref/c/func/orientToFromUpFace" target="_top">orientToFromUpFace</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
 <h3>Coordinate Format Conversions</h3>
 <div class="group_desc_indent">
 </div>
@@ -597,19 +571,17 @@ function disclosure_triangle(elt) {
 </dl>
 </div>
 <p>&nbsp;</p>
-<h3>Bezier Calculations</h3>
+<h3>SKUButton Enums</h3>
 <div class="group_desc_indent">
 </div>
 <h4>Group members:</h4>
 <div class="group_indent">
 <dl>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/bezierPoint" logicalPath="//apple_ref/c/func/bezierPoint" target="_top">bezierPoint</a></tt></dt>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonMethods" logicalPath="//apple_ref/c/tdef/kSKUButtonMethods" target="_top">kSKUButtonMethods</a></tt></dt>
 <dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/bezierTValueAtXValue" logicalPath="//apple_ref/c/func/bezierTValueAtXValue" target="_top">bezierTValueAtXValue</a></tt></dt>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonStates" logicalPath="//apple_ref/c/tdef/kSKUButtonStates" target="_top">kSKUButtonStates</a></tt></dt>
 <dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/centerOSCursorInWindow" logicalPath="//apple_ref/c/func/centerOSCursorInWindow" target="_top">centerOSCursorInWindow</a></tt></dt>
-<dd></dd>
-<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/hideOSCursor" logicalPath="//apple_ref/c/func/hideOSCursor" target="_top">hideOSCursor</a></tt></dt>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/kSKUButtonTypes" logicalPath="//apple_ref/c/tdef/kSKUButtonTypes" target="_top">kSKUButtonTypes</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -629,6 +601,34 @@ function disclosure_triangle(elt) {
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/rampToValue" logicalPath="//apple_ref/c/func/rampToValue" target="_top">rampToValue</a></tt></dt>
 <dd></dd>
 <dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/reverseLinearInterpolationBetweenFloatValues" logicalPath="//apple_ref/c/func/reverseLinearInterpolationBetweenFloatValues" target="_top">reverseLinearInterpolationBetweenFloatValues</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>Distance Functions</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetween" logicalPath="//apple_ref/c/func/distanceBetween" target="_top">distanceBetween</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetweenIsWithinXDistance" logicalPath="//apple_ref/c/func/distanceBetweenIsWithinXDistance" target="_top">distanceBetweenIsWithinXDistance</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/distanceBetweenIsWithinXDistancePreSquared" logicalPath="//apple_ref/c/func/distanceBetweenIsWithinXDistancePreSquared" target="_top">distanceBetweenIsWithinXDistancePreSquared</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>Random Numbers</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/randomFloatBetweenZeroAndHighend" logicalPath="//apple_ref/c/func/randomFloatBetweenZeroAndHighend" target="_top">randomFloatBetweenZeroAndHighend</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/randomUnsignedIntegerBetweenTwoValues" logicalPath="//apple_ref/c/func/randomUnsignedIntegerBetweenTwoValues" target="_top">randomUnsignedIntegerBetweenTwoValues</a></tt></dt>
 <dd></dd>
 </dl>
 </div>
@@ -874,7 +874,7 @@ function disclosure_triangle(elt) {
 <div class="list_indent"><dl>
 <dt><p><a href="index.html#//apple_ref/c/func/hideOSCursor" logicalPath="//apple_ref/c/func/hideOSCursor" target="_top">hideOSCursor</a></p></dt>
 <dd></dd>
-<dt><p><!-- a logicalPath="//apple_ref/c/cl/SKNode(ConsolidatedInput //apple_ref/c/tdef/SKNode(ConsolidatedInput //apple_ref/c/tag/SKNode(ConsolidatedInput //apple_ref/c/struct/SKNode(ConsolidatedInput //apple_ref/c/intf/SKNode(ConsolidatedInput //apple_ref/c/econst/SKNode(ConsolidatedInput //apple_ref/c/data/SKNode(ConsolidatedInput //apple_ref/c/clconst/SKNode(ConsolidatedInput //apple_ref/c/instm/SKNode(ConsolidatedInput //apple_ref/c/clm/SKNode(ConsolidatedInput //apple_ref/c/intfcm/SKNode(ConsolidatedInput //apple_ref/c/intfm/SKNode(ConsolidatedInput //apple_ref/c/func/SKNode(ConsolidatedInput //apple_ref/c/ftmplt/SKNode(ConsolidatedInput //apple_ref/c/defn/SKNode(ConsolidatedInput //apple_ref/c/macro/SKNode(ConsolidatedInput //apple_ref/doc/com/intfm/SKNode(ConsolidatedInput //apple_ref/doc/anysymbol/SKNode(ConsolidatedInput" -->mouseMovedSKU<!-- /a --></p></dt>
+<dt><p><a href="Categories/SKNode_SKUModifications_/index.html#//apple_ref/occ/cat/SKNode(SKUModifications)" logicalPath="//apple_ref/occ/cat/SKNode(SKUModifications)" target="_top">mouseMovedSKU</a></p></dt>
 <dd></dd>
 </dl></div>
 <hr class="betweenAPIEntries">
@@ -3337,7 +3337,7 @@ On iOS and tvOS, remaps <i>UIImage</i> to <i>SKUImage</i> and <i>UIFont</i> to <
 <div class="hd_copyright_and_timestamp">
 <p class="hd_copyright">&copy; 2015 Michael Redig - (See license file)
  </p>
-<p class="hd_timestamp">Last Updated: Saturday, January 09, 2016
+<p class="hd_timestamp">Last Updated: Sunday, January 17, 2016
 </p>
 </div>
 </td>
